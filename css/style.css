@@ -1,0 +1,173 @@
+
+h1
+{
+  font-family: 'Francois One', sans-serif;
+  color: #363636;
+  font-size: 2em;
+  text-align: center;
+  text-shadow: -2px 1px 0px #ff5555,  2px -1px 0px #01ffff;
+}
+
+a:hover {
+    background-color: #01ffff;
+
+}
+
+p
+{
+  font-family: 'News Cycle', sans-serif;
+}
+
+header
+{
+  padding: 20px;
+  background: #fff;
+  height: 60px;
+}
+
+footer{
+    background: #eee;
+}
+
+nav li {
+  list-style-type: none;
+  color: #ff5555;
+  font-family: 'Francois One', sans-serif;
+}
+
+nav .nav-item-logo {
+  position: relative;
+
+}
+
+nav .nav-item-offset {
+  position: relative;
+  top: 40px;
+  height: 60px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+nav .nav-item-offset-start:before {
+  content: '';
+  position: absolute;
+  height: 60px;
+  top: 0;
+  left: -20px;
+  border-top: 60px solid #fff;
+  border-left: 20px solid transparent;
+
+}
+
+nav .nav-item-offset-end:after {
+  content: '';
+  position: absolute;
+  width: 9999px;
+  height: 60px;
+  background-color: #fff;
+  top: 0px;
+  left: 100%;
+}
+
+
+nav .columns + .columns:last-child {
+  float: left;
+}
+
+nav a,.sns a
+{
+  color: #363636;
+  margin-top: 20px;
+}
+
+.container {
+  margin-top: 420px;
+  padding: 20px;
+  background: #fff;
+}
+
+.container:before{
+  content: '';
+  position: absolute;
+	border-bottom: 40px solid #fff;
+	border-left: 0px solid transparent;
+	border-right: 15px solid transparent;
+	height: 0;
+	width: 540px;
+  top:380px;
+  left:15px;
+
+}
+
+.arrows {
+  overflow: hidden;
+  position: relative;
+  top: -60px;
+}
+
+.columns .arrow{
+    position: relative;
+    top: 60px;
+    font-family: 'Francois One', sans-serif;
+    color: #fff;
+    font-size: 2.4em;
+    height:90px;
+    text-align: center;
+    background-color: #2ac3d5;
+    margin: 0 20px;
+}
+
+.columns .arrow:before{
+  content: '';
+  position: absolute;
+  height: 90px;
+  border-top: 45px solid #2ac3d5;
+  border-left: 20px solid transparent;
+  border-bottom: 45px solid #2ac3d5;
+  left:-20px;
+
+}
+.columns .arrow:after{
+  content: '';
+  position: absolute;
+  height: 90px;
+  border-top: 45px solid ;
+  border-left: 20px solid #2ac3d5;
+  border-bottom: 45px solid transparent;
+  right:-20px;
+
+}
+
+.columns .apply{
+
+    font-family: 'Francois One', sans-serif;
+    color: #fff;
+    font-size: 2.4em;
+    height:150px;
+    text-align: center;
+    background-color: #2ac3d5;
+    margin: 0 20px;
+    left: -47px;
+}
+
+.columns .apply:before{
+  content: '';
+  position: absolute;
+  height: 210px;
+  border-top: 105px solid red;
+  border-left: 47px solid transparent;
+  /*border-right: 75px solid transparent;*/
+  border-bottom: 105px solid red;
+  left:-47px;
+}
+
+.columns .apply:after{
+  content: '';
+  position: absolute;
+  height: 150px;
+  border-top: 75px solid transparent;
+  border-left: 33px solid #2ac3d5;
+  border-bottom: 75px solid transparent;
+  right:-33px;
+
+}
