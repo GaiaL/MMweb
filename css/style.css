@@ -1,6 +1,5 @@
 
-h2
-{
+h2{
   font-family: 'Francois One', sans-serif;
   color: #363636;
   font-size: 1.6em;
@@ -16,65 +15,94 @@ h3{
   margin: 30px 0 10px 0;
 }
 
-#media{
-  margin-bottom: 28px;
-}
-
-nav a:hover {
-    background-color: #01ffff;
-}
-
-p
-{
+p{
   font-family: 'News Cycle', sans-serif;
 }
 
-header
-{
+header{
   padding: 20px;
   background: #fff;
   height: 60px;
 }
 
 footer{
-    background: #eee;
+  background: #eee;
+  padding:10px 10px;
+}
+#media{
+  margin-bottom: 28px;
 }
 
+nav a:hover,footer a:hover {
+    background-color: #01ffff;
+}
+
+
+footer li{
+    list-style-type:none;
+    color: #ff5555;
+    font-family: 'Francois One', sans-serif;
+}
+
+
 nav li {
+  position: relative;
   list-style-type: none;
   color: #ff5555;
   font-family: 'Francois One', sans-serif;
+  float: left;
+  padding-left: 20px;
+}
+
+nav li:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  left: 8px;
+  background-color:#ff5555;
+  background-clip: content-box;
+  height: 25.6px;
+  box-sizing: padding-box;
+  padding: 3px 0;
 }
 
 nav .nav-item-logo {
   position: relative;
+}
 
+nav li.nav-item-logo:before {
+  background-color: transparent;
+}
+
+nav li.nav-item-logo + li:before {
+  background-color: transparent;
 }
 
 nav .nav-item-offset {
   position: relative;
   top: 40px;
-  height: 60px;
+  height: 50px;
   background-color: #fff;
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
+  float: right;
 }
 
-nav .nav-item-offset-start:before {
+nav .nav-item-offset-end:before {
   content: '';
   position: absolute;
-  height: 60px;
+  height: 50px;
   top: 0;
   left: -20px;
-  border-top: 60px solid #fff;
+  border-top: 50px solid #fff;
   border-left: 20px solid transparent;
 
 }
 
-nav .nav-item-offset-end:after {
+nav .nav-item-offset-start:after {
   content: '';
   position: absolute;
   width: 9999px;
-  height: 60px;
+  height: 50px;
   background-color: #fff;
   top: 0px;
   left: 100%;
@@ -85,18 +113,13 @@ nav .columns + .columns:last-child {
   float: left;
 }
 
-nav a,.sns a
+nav a,.sns a,footer a
 {
   color: #363636;
   margin-top: 20px;
 }
 
-.arrows a{
-  color: #fff;
-}
-.arrows a:hover {
-    text-shadow: -2px 1px 0px #ff5555,  2px -1px 0px #01ffff;;
-}
+
 
 .container {
   margin-top: 420px;
@@ -138,6 +161,8 @@ nav a,.sns a
 
 }
 
+
+
 .arrows {
   overflow: hidden;
   position: relative;
@@ -145,7 +170,7 @@ nav a,.sns a
   text-transform: uppercase;
   line-height: 90px;
   vertical-align: middle;
-  padding-left: 2px;
+  padding-left: 20px;
   margin-bottom: -40px;
 }
 
@@ -180,6 +205,13 @@ nav a,.sns a
   border-bottom: 45px solid transparent;
   right:-20px;
 
+}
+
+.arrows a{
+  color: #fff;
+}
+.arrows a:hover {
+    text-shadow: -3px 1px 0px #ff5555,  4px -1px 0px #01ffff;;
 }
 
 .admission{
