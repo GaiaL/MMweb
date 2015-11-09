@@ -10,9 +10,17 @@ h2,.apply2{
 h3{
   font-family: 'Francois One', sans-serif;
   color: #ff5555;
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-align: left;
-  margin: 30px 0 10px 0;
+  margin: 20px 0 10px 0;
+}
+
+h4{
+  font-family: 'Francois One', sans-serif;
+  color:  #2ac3d5;
+  font-size: 1.1em;
+  text-align: left;
+  margin: 15px 0 6px 0;
 }
 
 p{
@@ -161,7 +169,7 @@ nav a,.sns a,footer a
 .sub-container {
   padding: 20px 20px;
   background: #eee;
-  margin: 20px 0;
+  margin: 20px 10px;
   box-shadow: 4px 1px 0px #ff5555,  -2px 5px 0px #01ffff;
 }
 
@@ -180,7 +188,7 @@ nav a,.sns a,footer a
 .sub-container2 {
   padding: 20px 20px;
   background: #eee;
-  margin: 20px 0;
+  margin: 20px 0px;
   box-shadow: 4px 1px 0px #ff5555,  -2px 5px 0px #01ffff;
 }
 
@@ -366,4 +374,9 @@ nav .nav-item-offset.apply2 {
 .video-title p{
   text-align: center;
   font-weight: bold;
+}
+.courses{
+
+  position: relative;
+  width: 48%;
 }
