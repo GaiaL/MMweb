@@ -1,5 +1,5 @@
 
-h2{
+h2,.apply2{
   font-family: 'Francois One', sans-serif;
   color: #363636;
   font-size: 1.6em;
@@ -244,7 +244,7 @@ nav a,.sns a,footer a
 .arrows a{
   color: #fff;
 }
-.arrows a:hover {
+.arrows a:hover{
     text-shadow: -3px 1px 0px #ff5555,  4px -1px 0px #01ffff;;
 }
 
@@ -256,15 +256,11 @@ nav a,.sns a,footer a
 .admission:before{
     border-top: 45px solid #e97cb7;
     border-bottom: 45px solid #e97cb7;
-
-
 }
 
 .admission:after{
   border-left: 20px solid #e97cb7;
 }
-
-
 
 .apply{
     font-family: 'Francois One', sans-serif;
@@ -313,7 +309,8 @@ nav .nav-item-offset.apply2 {
    width:20%;
    box-sizing: border-box;
    font-family: 'Francois One', sans-serif;
-   font-size: 1.5em;
+   font-size: 1.8em;
+   line-height: 30px;
    height:100px;
    text-align: center;
    background-color: #c7e232;
@@ -356,6 +353,7 @@ nav .nav-item-offset.apply2 {
   top: 0;
   right: -20px;
 }
+
 
 .sub-content{
   padding:15px;
