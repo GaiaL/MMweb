@@ -1,0 +1,28 @@
+{
+  "name": "MMweb",
+  "version": "0.1.0",
+  "homepage": "https://github.com/iGreeny/MMweb",
+  "authors": [
+    "G. Liu <onemancrew42@gmail.com>",
+    "Philip Tzou <philip.npc@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "normalize.css": "~3.0.3",
+    "sass-toolkit": "~2.9.0",
+    "foundation": "~5.5.3",
+    "modernizr": "~2.8.3",
+    "francois-one": "http://www.fontsquirrel.com/fontfacekit/francois-one",
+    "news-cycle": "http://www.fontsquirrel.com/fontfacekit/news-cycle",
+    "Retina-sprites-for-Compass": "*"
+  }
+}

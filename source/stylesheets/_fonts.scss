@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "News Cycle";
+  src: font-url('NewsCycle-Bold-webfont.eot');
+  src: font-url('NewsCycle-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       font-url('NewsCycle-Bold-webfont.woff') format('woff'),
+       font-url('NewsCycle-Bold-webfont.ttf') format('truetype'),
+       font-url('NewsCycle-Bold-webfont.svg#news_cyclebold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "News Cycle";
+  src: font-url('NewsCycle-Regular-webfont.eot');
+  src: font-url('NewsCycle-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       font-url('NewsCycle-Regular-webfont.woff') format('woff'),
+       font-url('NewsCycle-Regular-webfont.ttf') format('truetype'),
+       font-url('NewsCycle-Regular-webfont.svg#news_cycleRegular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Francois One';
+    src: font-url('FrancoisOne-webfont.eot');
+    src: font-url('FrancoisOne-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('FrancoisOne-webfont.woff') format('woff'),
+         font-url('FrancoisOne-webfont.ttf') format('truetype'),
+         font-url('FrancoisOne-webfont.svg#francois_oneregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin font-francois-one {
+  font-family: "Francois One", sans-serif;
+}
+
+@mixin font-news-cycle {
+  font-family: "News Cycle", sans-serif;
+}
+

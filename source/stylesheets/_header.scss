@@ -1,0 +1,96 @@
+$dividing-line-width: 4px;
+$dividing-line-length: $element-medium-spacing;
+$item-height: 25px;
+$navbar-right-item-offset: 40px;
+$navbar-right-item-vertical-spacing: $element-narrow-spacing;
+$navbar-right-item-height: $item-height + $navbar-right-item-vertical-spacing * 2;
+$navbar-triangle-width: 20px;
+$header-height: 60px;
+$header-outer-height: $element-medium-spacing + sprite-height("logo");
+
+header {
+  padding-bottom: $header-outer-height - $header-height;
+  background-color: $color-white;
+  background-clip: content-box;
+  height: $header-outer-height;
+  overflow: hidden;
+}
+
+nav.navbar {
+  @extend .row;
+  padding-top: $element-medium-spacing;
+
+  a {
+    @include header-footer-link;
+  }
+
+  h1 {
+    @include inherit-htag;
+  }
+
+}
+
+ul.navbar-items > li {
+  float: left;
+  position: relative;
+  list-style-type: none;
+  height: $item-height;
+  line-height: $item-height;
+  vertical-align: middle;
+  padding-left: $element-medium-spacing;
+
+  &:before {
+    @include pseudo-element;
+    position: absolute;
+    width: $dividing-line-width;
+    left: ($element-medium-spacing - $dividing-line-width) / 2;
+    background-color: $color-carnation;
+    background-clip: content-box;
+    height: $item-height;
+    padding: ($item-height - $dividing-line-length) / 2 0;
+  }
+
+  &.navbar-item-logo {
+    a {
+      @include hide-text;
+      @include use-sprite('logo');
+    }
+    &:before, &+ li:before {
+      background-color: transparent;
+    }
+  }
+
+  &.navbar-item-right {
+    float: right;
+    top: $navbar-right-item-offset;
+    height: $navbar-right-item-height;
+    background-color: $color-white;
+    @include set-multiple($navbar-right-item-vertical-spacing,
+                          padding-top padding-bottom);
+
+    &:after {
+      @include pseudo-element;
+      position: absolute;
+      width: 100vw; // equals to window width
+      height: $navbar-right-item-height;
+      background-color: $color-white;
+      top: 0;
+      left: 100%;
+    }
+
+    &~ .navbar-item-right:after {
+      // only the first element of .navbar-item-right can have ::after
+      content: initial;
+    }
+
+    &:last-of-type:before {
+      padding: 0;
+      top: 0;
+      left: -$navbar-triangle-width;
+      @include triangle($color-white,
+                        $navbar-right-item-height,
+                        $navbar-triangle-width,
+                        top right); 
+    }
+  }
+}

@@ -1,0 +1,37 @@
+footer {
+  background-color: $color-gallery;
+  padding: $element-medium-spacing $element-narrow-spacing;
+}
+
+.footer {
+  @extend .row;
+
+  a {
+    @include header-footer-link;
+  }
+
+  ul > li {
+    list-style-type: none;
+  }
+}
+
+.footer-column {
+  @extend .medium-3;
+  @extend .small-12;
+  @extend .columns;
+
+}
+
+ul.footer-contacts > li {
+  padding-bottom: $element-wide-spacing;
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}
+
+ul.footer-social-networks > li {
+  float: left;
+  @include set-multiple($element-narrow-spacing,
+                        padding-right padding-bottom);
+}

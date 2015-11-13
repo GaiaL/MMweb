@@ -1,0 +1,4 @@
+.social-facebook {
+  @include hide-text;
+  @include use-sprite("facebook-icon");
+}

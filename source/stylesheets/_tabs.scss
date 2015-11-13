@@ -1,0 +1,144 @@
+$tab-height: 90px;
+$tab-large-height: 140px;
+$tab-offset: $tab-large-height - $tab-height;
+$arrow-head-angle: 135deg;
+$tab-horizontal-spacing: 7px;
+$_arrow-head-tan: tan($arrow-head-angle / 2);
+$arrow-width: round($tab-height / $_arrow-head-tan / 2);
+$arrow-large-width: round($tab-large-height / $_arrow-head-tan / 2);
+$tab-real-horizontal-spacing: $tab-horizontal-spacing + $arrow-width / 2;
+$tab-large-arrow-skew-angle: (180deg - $arrow-head-angle) / 2;
+$tab-large-arrow-skew-height: $tab-large-height - $tab-height;
+$tab-large-arrow-skew-horizontal-offset: - $tab-large-arrow-skew-height * tan($tab-large-arrow-skew-angle) / 2;
+
+.arrow-tabs {
+  @extend .row;
+  position: relative;
+  height: $tab-height;
+  vertical-align: middle;
+  padding: 0 $element-medium-spacing;
+}
+
+.arrow-tab {
+  @extend .medium-4;
+  @extend .small-12;
+  @extend .columns;
+  padding: 0;
+
+  > a {
+    @include font-francois-one;
+    position: relative;
+    display: block;
+    color: $color-white;
+    font-size: 2rem;
+    @include set-multiple($tab-height, height line-height);
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $color-gallery;
+    background-clip: content-box;
+    padding: 0 $tab-horizontal-spacing + $arrow-width / 2;
+    z-index: 1;
+
+    > .arrow-tab-title {
+      height: $tab-height;
+
+      &:before, &:after {
+        @include pseudo-element;
+        @include triangle($height: $tab-height,
+                          $width: $arrow-width,
+                          $angle: 90);
+        position: absolute;
+        top: 0;
+      }
+      &:before {
+        left: $tab-horizontal-spacing - $arrow-width / 2;
+        border-left-color: transparent;
+      }
+      &:after {
+        right: $tab-horizontal-spacing - $arrow-width / 2;
+      }
+    }
+
+    > .arrow-tab-subtitle {
+      position: absolute;
+      @include set-multiple($tab-large-arrow-skew-height,
+                            height line-height);
+      top: - $tab-offset;
+      left: $tab-horizontal-spacing - $arrow-width / 2;
+      padding-left: $arrow-width;
+      padding-right: $tab-horizontal-spacing * 2; // $arrow-width + 2 * left
+      width: 100%;
+      font-size: .6em;
+      background-clip: content-box;
+      &:before {
+        @include pseudo-element;
+        position: absolute;
+        left: $tab-large-arrow-skew-horizontal-offset;
+        padding-right: $tab-horizontal-spacing * 2;
+        background-clip: content-box;
+        width: 100%;
+        height: $tab-large-arrow-skew-height;
+        transform: skew($tab-large-arrow-skew-angle);
+        z-index: -1;
+      }
+      @at-root :last-of-type#{&} {
+        &:after {
+          @include pseudo-element;
+          @include triangle($height: $tab-large-height,
+                            $width: $arrow-large-width,
+                            $angle: 90);
+          position: absolute;
+          top: 0;
+          right: $tab-horizontal-spacing * 2 - $arrow-large-width;
+        }
+      }
+    }
+  }
+
+  @mixin arrow-tab-bgcolor($color) {
+    > a > .arrow-tab-title {
+      background-color: $color;
+      &:before {
+        @include set-multiple($color,
+                              border-top-color border-bottom-color);
+        box-shadow: 1px 0 $color;
+      }
+
+      &:after {
+        border-left-color: $color;
+        box-shadow: -1px 0 $color;
+      }
+    }
+    > a > .arrow-tab-subtitle {
+      @at-root :last-of-type#{&} {
+        background-color: $color;
+        &:after {
+          border-left-color: $color;
+          box-shadow: -1px 0 $color;
+        }
+      }
+      &:before {
+        background-color: $color;
+      }
+    }
+  }
+
+  &:nth-of-type(1) {
+    @include arrow-tab-bgcolor($color-scooter);
+  }
+
+  &:nth-of-type(2) {
+    @include arrow-tab-bgcolor($color-persian-pink);
+  }
+
+  &.arrow-tab-cta {
+    @include arrow-tab-bgcolor($color-pear);
+    > a {
+      font-size: 2.4em;
+      &:hover > .arrow-tab-title {
+        @include anaglyph-3d(3px, 1px, 4px, $shadow-attr: text-shadow);
+      }
+    }
+  }
+
+}

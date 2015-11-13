@@ -1,0 +1,7 @@
+@function sprite-height($sprite) {
+  @return image-height(sprite-file($icons, $sprite));
+}
+
+@function sprite-width($sprite) {
+  @return image-width(sprite-file($icons, $sprite));
+}

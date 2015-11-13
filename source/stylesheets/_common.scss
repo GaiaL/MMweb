@@ -1,0 +1,7 @@
+body {
+  @include font-news-cycle;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include font-francois-one;
+}

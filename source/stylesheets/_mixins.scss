@@ -1,0 +1,34 @@
+@mixin pseudo-element {
+  content: '';
+  display: block;
+}
+
+@mixin header-footer-link {
+  @include font-francois-one;
+  color: $color-tuatara;
+  font-size: 1rem; 
+  &:hover {
+    background-color: $color-cyan;
+  }
+}
+
+@mixin inherit-htag {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin-top: inherit;
+  margin-bottom: inherit;
+}
+
+@mixin anaglyph-3d($horizontal-red-distance: 2px,
+                   $vertical-red-distance: 1px,
+                   $horizontal-cyan-distance: null,
+                   $vertical-cyan-distance: null,
+                   $red: $color-carnation,
+                   $cyan: $color-cyan,
+                   $shadow-attr: box-shadow) {
+  $horizontal-cyan-distance: $horizontal-red-distance !default;
+  $vertical-cyan-distance: $vertical-red-distance !default;
+  #{$shadow-attr}: 0 - $horizontal-red-distance $vertical-red-distance $red,
+                   $horizontal-cyan-distance 0 - $vertical-cyan-distance $cyan;
+}
