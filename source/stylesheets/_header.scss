@@ -10,6 +10,7 @@ $header-outer-height: $element-medium-spacing + sprite-height("logo");
 
 header {
   padding-bottom: $header-outer-height - $header-height;
+  margin-bottom: $header-height - $header-outer-height;
   background-color: $color-white;
   background-clip: content-box;
   height: $header-outer-height;
@@ -51,6 +52,7 @@ ul.navbar-items > li {
   }
 
   &.navbar-item-logo {
+    z-index: 1;
     a {
       @include hide-text;
       @include use-sprite('logo');
@@ -67,6 +69,7 @@ ul.navbar-items > li {
     background-color: $color-white;
     @include set-multiple($navbar-right-item-vertical-spacing,
                           padding-top padding-bottom);
+    z-index: 1;
 
     &:after {
       @include pseudo-element;

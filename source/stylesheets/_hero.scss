@@ -1,0 +1,49 @@
+$hero-large-height: 500px;
+$hero-arrow-opacity: .4;
+$hero-arrow-hover-opacity: .8;
+
+.hero-container {
+  position: relative;
+  height: $hero-large-height;
+  overflow: hidden;
+
+  &.slick-initialized {
+    overflow: visible;
+  }
+
+  .slick-list {
+    height: $hero-large-height;
+    overflow: hidden;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    opacity: $hero-arrow-opacity;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    @include hide-text;
+    margin: 0 $element-medium-spacing;
+    &:focus {
+      outline: 0;
+    }
+    &:hover {
+      opacity: $hero-arrow-hover-opacity;
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+    z-index: 1;
+    @include use-sprite("arrow-left");
+    margin-top: - sprite-height("arrow-left") / 2;
+  }
+
+  .slick-next {
+    right: 0;
+    @include use-sprite("arrow-right");
+    margin-top: - sprite-height("arrow-right") / 2;
+  }
+
+}

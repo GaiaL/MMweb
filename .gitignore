@@ -10,6 +10,9 @@
 # Ignore bower components
 /vendor
 
+# Ignore npm packages
+/node_modules
+
 # Ignore the build directory
 /build
 

@@ -7,12 +7,14 @@
 @import "colors";
 @import "mixins";
 @import "helpers";
-@import "foundation/scss/foundation";
+@import "foundation-sites/scss/foundation";
 @import "Retina-sprites-for-Compass/src/retina-sprites";
+@import "slick-carousel/slick/slick";
 
 @import "common";
 @import "header";
 @import "footer";
+@import "hero";
 @import "tabs";
 @import "socials";
 @import "placeholders";

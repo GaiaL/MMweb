@@ -1,5 +1,5 @@
 $tab-height: 90px;
-$tab-large-height: 140px;
+$tab-large-height: 120px;
 $tab-offset: $tab-large-height - $tab-height;
 $arrow-head-angle: 135deg;
 $tab-horizontal-spacing: 7px;
@@ -10,6 +10,7 @@ $tab-real-horizontal-spacing: $tab-horizontal-spacing + $arrow-width / 2;
 $tab-large-arrow-skew-angle: (180deg - $arrow-head-angle) / 2;
 $tab-large-arrow-skew-height: $tab-large-height - $tab-height;
 $tab-large-arrow-skew-horizontal-offset: - $tab-large-arrow-skew-height * tan($tab-large-arrow-skew-angle) / 2;
+$tab-subtitle-text-offset: 20px;
 
 .arrow-tabs {
   @extend .row;
@@ -18,6 +19,15 @@ $tab-large-arrow-skew-horizontal-offset: - $tab-large-arrow-skew-height * tan($t
   vertical-align: middle;
   padding: 0 $element-medium-spacing;
 }
+
+@mixin parallelogram-pseudo-element {
+  @include pseudo-element;
+  position: absolute;
+  background-clip: content-box;
+  height: $tab-large-arrow-skew-height;
+  transform: skew($tab-large-arrow-skew-angle);
+}
+
 
 .arrow-tab {
   @extend .medium-4;
@@ -61,8 +71,8 @@ $tab-large-arrow-skew-horizontal-offset: - $tab-large-arrow-skew-height * tan($t
 
     > .arrow-tab-subtitle {
       position: absolute;
-      @include set-multiple($tab-large-arrow-skew-height,
-                            height line-height);
+      height: $tab-large-arrow-skew-height;
+      line-height: $tab-large-arrow-skew-height + $tab-subtitle-text-offset * 2;
       top: - $tab-offset;
       left: $tab-horizontal-spacing - $arrow-width / 2;
       padding-left: $arrow-width;
@@ -71,14 +81,10 @@ $tab-large-arrow-skew-horizontal-offset: - $tab-large-arrow-skew-height * tan($t
       font-size: .6em;
       background-clip: content-box;
       &:before {
-        @include pseudo-element;
-        position: absolute;
+        @include parallelogram-pseudo-element;
         left: $tab-large-arrow-skew-horizontal-offset;
         padding-right: $tab-horizontal-spacing * 2;
-        background-clip: content-box;
         width: 100%;
-        height: $tab-large-arrow-skew-height;
-        transform: skew($tab-large-arrow-skew-angle);
         z-index: -1;
       }
       @at-root :last-of-type#{&} {
@@ -92,6 +98,17 @@ $tab-large-arrow-skew-horizontal-offset: - $tab-large-arrow-skew-height * tan($t
           right: $tab-horizontal-spacing * 2 - $arrow-large-width;
         }
       }
+    }
+  }
+
+  &.arrow-tab-banner-end {
+    &:before {
+      @include parallelogram-pseudo-element;
+      right: ($tab-horizontal-spacing + $arrow-width / 2) / 2;
+      padding-right: $tab-horizontal-spacing * 2;
+      background-color: $color-white;
+      width: 100vw;
+      top: - $tab-large-arrow-skew-height;
     }
   }
 

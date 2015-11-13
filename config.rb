@@ -90,3 +90,10 @@ bower_dir = 'vendor/assets/bower/'
       end
   end
 end
+
+npm_dir = 'node_modules/'
+sprockets.append_path Pathname.new('../' + npm_dir)  # relative to source/
+
+compass_config do |config|
+  config.add_import_path File.expand_path(npm_dir)
+end
