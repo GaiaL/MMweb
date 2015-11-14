@@ -6,8 +6,8 @@ Installation
 ------------
 
 To build MMweb on your local machine, you need to install rvm, ruby-2.2.3,
-nodejs, npm and bower. Below are the steps to install these dependencies in
-different systems.
+bundle, nodejs, npm and bower. Below are the steps to install these
+dependencies in different systems.
 
 ### MacOSX
 
@@ -15,9 +15,10 @@ different systems.
 curl -sSL https://get.rvm.io | bash -s stable
 rvm install ruby-2.2.3
 brew install node npm
-npm install bower
+npm install bower -g
 
 cd MMweb
+gem install bundle -g
 bundle
 bower install
 npm install
