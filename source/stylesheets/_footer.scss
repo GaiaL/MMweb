@@ -1,9 +1,10 @@
-footer {
+.footer {
+  margin-top: $element-section-spacing;
   background-color: $color-gallery;
   padding: $element-medium-spacing $element-narrow-spacing;
 }
 
-.footer {
+.footer-container {
   @extend .row;
 
   a {

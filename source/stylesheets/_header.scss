@@ -8,7 +8,7 @@ $navbar-triangle-width: 20px;
 $header-height: 60px;
 $header-outer-height: $element-medium-spacing + sprite-height("logo");
 
-header {
+.header {
   padding-bottom: $header-outer-height - $header-height;
   margin-bottom: $header-height - $header-outer-height;
   background-color: $color-white;

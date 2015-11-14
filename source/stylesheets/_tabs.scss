@@ -11,6 +11,19 @@ $tab-large-arrow-skew-angle: (180deg - $arrow-head-angle) / 2;
 $tab-large-arrow-skew-height: $tab-large-height - $tab-height;
 $tab-large-arrow-skew-horizontal-offset: - $tab-large-arrow-skew-height * tan($tab-large-arrow-skew-angle) / 2;
 $tab-subtitle-text-offset: 20px;
+$medium-and-large-tabs-count: 3;
+$tab-pointer-transition-speed: .2s;
+
+$tab-pointer-width: 50px;
+$tab-pointer-height: 20px;
+
+
+%arrow-column {
+  @extend .medium-#{12 / $medium-and-large-tabs-count};
+  @extend .small-12;
+  @extend .columns;
+}
+
 
 .arrow-tabs {
   @extend .row;
@@ -18,6 +31,28 @@ $tab-subtitle-text-offset: 20px;
   height: $tab-height;
   vertical-align: middle;
   padding: 0 $element-medium-spacing;
+  margin-bottom: $element-narrow-spacing + $tab-pointer-height;
+
+  &:after {
+    @include pseudo-element;
+    @extend %arrow-column;
+    padding: 0;
+    opacity: 0;
+    margin-top: $element-narrow-spacing;
+    left: - $tab-pointer-width / 2;
+    @include triangle($color: $color-gallery,
+                      $height: $tab-pointer-height,
+                      $width: $tab-pointer-width,
+                      $angle: 0);
+    transition: margin-left $tab-pointer-transition-speed, opacity $tab-pointer-transition-speed; 
+  }
+
+  @for $i from 1 through $medium-and-large-tabs-count {
+    &[data-current-tab="#{$i}"]:after {
+      opacity: 1;
+      margin-left: ($i - .5) * 100% / $medium-and-large-tabs-count;
+    }
+  }
 }
 
 @mixin parallelogram-pseudo-element {
@@ -30,9 +65,7 @@ $tab-subtitle-text-offset: 20px;
 
 
 .arrow-tab {
-  @extend .medium-4;
-  @extend .small-12;
-  @extend .columns;
+  @extend %arrow-column;
   padding: 0;
 
   > a {
