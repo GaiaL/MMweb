@@ -1,0 +1,42 @@
+language: ruby
+sudo: false
+env:
+  - |-
+    OWNER_NAME=$(echo $TRAVIS_REPO_SLUG | awk -F '/' '{print $1}')
+    REPO_ID_philiptzou="3a03254beac3"
+    BUILD_MESSAGE="build(${TRAVIS_COMMIT}): $(git log --format=%B -n 1 $TRAVIS_COMMIT)"
+    BUILD_USER_NAME="$(git log --format=%aN -n 1 $TRAVIS_COMMIT)"
+    BUILD_USER_EMAIL="$(git log --format=%aE -n 1 $TRAVIS_COMMIT)"
+cache:
+  directories:
+    - build/.git
+    - node_modules
+    - vendor/bundle
+    - vendor/assets/bower
+before_install:
+  - npm install -g bower
+install:
+  - bundle install --path vendor/bundle
+  - bower install
+  - npm install
+before_script:
+  - openssl aes-256-cbc -K $(eval echo \$encrypted_$(eval echo \${REPO_ID_${OWNER_NAME}})_key) -iv $(eval echo \$encrypted_$(eval echo \${REPO_ID_${OWNER_NAME}})_iv) -in .travis/${OWNER_NAME}.pem.enc -out .travis/${OWNER_NAME}.pem -d
+  - eval "$(ssh-agent -s)"
+  - chmod 600 .travis/${OWNER_NAME}.pem
+  - ssh-add .travis/${OWNER_NAME}.pem
+  - git config --global user.name $BUILD_USER_NAME
+  - git config --global user.email $BUILD_USER_EMAIL
+  - git init build; pushd build
+  - git remote add origin git@github.com:${TRAVIS_REPO_SLUG}.git || true
+  - git checkout -- .
+  - git pull origin gh-pages || true
+  - popd
+script:
+  - bundle exec middleman build
+  - bundle exec middleman build
+after_success:
+  - pushd build
+  - git add -A
+  - git commit -m "$BUILD_MESSAGE"
+  - if [[ $TRAVIS_BRANCH == master && $TRAVIS_PULL_REQUEST == false ]]; then git push origin master:gh-pages; fi
+  - popd build

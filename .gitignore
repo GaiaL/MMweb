@@ -30,3 +30,6 @@
 
 # Ignore other auto-generated files
 source/images/*-s*.*
+
+# Ignore private keys
+.travis/*.pem

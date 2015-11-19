@@ -1,14 +1,7 @@
 GEM
-  remote: https://api.rubygems.org/
-  specs:
-    tzinfo-data (1.2015.7)
-      tzinfo (>= 1.0.0)
-    wdm (0.1.1)
-
-GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.2.4)
+    activesupport (4.2.5)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -24,7 +17,7 @@ GEM
     coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.9.1.1)
+    coffee-script-source (1.10.0)
     compass (1.0.3)
       chunky_png (~> 1.2)
       compass-core (~> 1.0.2)
@@ -53,7 +46,7 @@ GEM
     i18n (0.7.0)
     json (1.8.3)
     kramdown (1.9.0)
-    listen (3.0.4)
+    listen (3.0.5)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     middleman (3.4.0)
@@ -93,9 +86,9 @@ GEM
       sprockets-sass (~> 1.3.0)
     mime-types (2.6.2)
     mini_portile (0.6.2)
-    minitest (5.8.2)
+    minitest (5.8.3)
     multi_json (1.11.2)
-    nokogiri (1.6.6.2)
+    nokogiri (1.6.6.3)
       mini_portile (~> 0.6.0)
     padrino-helpers (0.12.5)
       i18n (~> 0.6, >= 0.6.7)
@@ -144,3 +137,6 @@ DEPENDENCIES
   middleman-livereload (~> 3.1.0)
   tzinfo-data
   wdm (~> 0.1.0)
+
+BUNDLED WITH
+   1.10.6
