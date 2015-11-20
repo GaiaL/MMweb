@@ -1,10 +1,12 @@
+$rem-base: 16px;
 @import "compass";
 @import "sass-toolkit/stylesheets/toolkit";
 @import "sass-toolkit/stylesheets/toolkit/set-multiple";
+@import "foundation-sites/scss/foundation/functions";
+@import "colors";
 @import "variables";
 @import "reset";
 @import "fonts";
-@import "colors";
 @import "mixins";
 @import "helpers";
 @import "foundation-sites/scss/foundation";

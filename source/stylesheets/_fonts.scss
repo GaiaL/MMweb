@@ -32,10 +32,10 @@
 }
 
 @mixin font-francois-one {
-  font-family: "Francois One", sans-serif;
+  font-family: $font-francois-one;
 }
 
 @mixin font-news-cycle {
-  font-family: "News Cycle", sans-serif;
+  font-family: $font-news-cycle;
 }
 

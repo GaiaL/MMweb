@@ -1,8 +1,31 @@
-$unit: 16px;
-$element-section-spacing: 60px;
-$element-wide-spacing: 30px;
-$element-medium-spacing: 20px;
-$element-narrow-spacing: 10px;
+$unit: $rem-base;
+$element-section-spacing: rem-calc(60px);
+$element-wide-spacing: rem-calc(30px);
+$element-medium-spacing: rem-calc(20px);
+$element-narrow-spacing: rem-calc(10px);
+
+$font-francois-one: "Francois One", sans-serif;
+$font-news-cycle: "News Cycle", sans-serif;
 
 // Compass `hide-text` global variable, see http://goo.gl/SijBFc
 $hide-text-direction: right;
+
+// override foundation settings
+$topbar-bg-color: transparent;
+$topbar-dropdown-bg: $color-white;
+$topbar-height: rem-calc(25px);
+$topbar-link-padding: 0;
+$topbar-input-height: rem-calc(20px);
+$topbar-link-color: $color-tuatara;
+$topbar-link-color-hover: $color-tuatara;
+$topbar-link-color-active: $color-tuatara;
+$topbar-link-color-active-hover: $color-tuatara;
+$topbar-menu-link-color: $color-tuatara;
+$topbar-menu-icon-color: $color-pear;
+$topbar-menu-link-color-toggled: $color-stardust;
+$topbar-menu-icon-color-toggled: $color-stardust;
+$topbar-menu-link-font-size: 1.2rem;
+$topbar-link-bg-color-hover: $color-cyan;
+$topbar-link-bg-hover: false;
+$topbar-link-font-family: $font-francois-one;
+$topbar-link-font-size: rem-calc(16);

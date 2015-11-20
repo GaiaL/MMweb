@@ -1,12 +1,12 @@
-$hero-large-height: 500px;
+$hero-large-height: rem-calc(500px);
 $hero-arrow-opacity: .4;
 $hero-arrow-hover-opacity: .8;
-$hero-bullet-size: 12px;
-$hero-bullet-spacing: 4px;
+$hero-bullet-size: rem-calc(12px);
+$hero-bullet-spacing: rem-calc(4px);
 $hero-caption-background-opacity: .6;
 $hero-caption-vertical-margin: 20%;
 $hero-caption-horizontal-margin: 20%;
-$hero-caption-title-size: 2rem;
+$hero-caption-title-size: rem-calc(32px);
 
 .hero-container {
   position: relative;

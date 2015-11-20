@@ -9,12 +9,12 @@
     box-sizing: content-box;
     height: 100%;
     width: 100%;
-    padding: 8px 3px;
+    padding: rem-calc(8px 3px);
     background-color: $color-cyan;
     z-index: -1;
     mix-blend-mode: multiply;
-    top: -4px;
-    left: -6px;
+    top: rem-calc(-4px);
+    left: rem-calc(-6px);
   }
 }
 
@@ -26,12 +26,12 @@
     box-sizing: content-box;
     height: 100%;
     width: 100%;
-    padding: 6px 4px;
+    padding: rem-calc(6px 4px);
     background-color: $color-carnation;
     z-index: -1;
     mix-blend-mode: multiply;
-    top: -10px;
-    right: -8px;
+    top: rem-calc(-10px);
+    right: rem-calc(-8px);
   }
 }
 

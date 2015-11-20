@@ -1,8 +1,8 @@
-$tab-height: 90px;
-$tab-large-height: 120px;
+$tab-height: rem-calc(90px);
+$tab-large-height: rem-calc(120px);
 $tab-offset: $tab-large-height - $tab-height;
 $arrow-head-angle: 135deg;
-$tab-horizontal-spacing: 7px;
+$tab-horizontal-spacing: rem-calc(7px);
 $_arrow-head-tan: tan($arrow-head-angle / 2);
 $arrow-width: round($tab-height / $_arrow-head-tan / 2);
 $arrow-large-width: round($tab-large-height / $_arrow-head-tan / 2);
@@ -10,12 +10,12 @@ $tab-real-horizontal-spacing: $tab-horizontal-spacing + $arrow-width / 2;
 $tab-large-arrow-skew-angle: (180deg - $arrow-head-angle) / 2;
 $tab-large-arrow-skew-height: $tab-large-height - $tab-height;
 $tab-large-arrow-skew-horizontal-offset: - $tab-large-arrow-skew-height * tan($tab-large-arrow-skew-angle) / 2;
-$tab-subtitle-text-offset: 20px;
+$tab-subtitle-text-offset: rem-calc(20px);
 $medium-and-large-tabs-count: 3;
 $tab-pointer-transition-speed: .2s;
 
-$tab-pointer-width: 50px;
-$tab-pointer-height: 20px;
+$tab-pointer-width: rem-calc(50px);
+$tab-pointer-height: rem-calc(20px);
 
 
 %arrow-column {

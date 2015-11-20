@@ -1,13 +1,19 @@
 .header
-  %nav.navbar
-    %ul.navbar-items
-      %li.navbar-item-logo
+  %nav.top-bar(data-topbar role="navigation")
+    %ul.title-area
+      %li.top-bar-logo
         %h1= link_to "Multimedia Graduate Program", "#"
-      %li= link_to "Home", "/"
-      %li= link_to "Student Work", "#"
-      %li= link_to "Faculty & Staff", "#"
-      %li.navbar-item-right= link_to "Contact", "#"
-      %li.navbar-item-right
-        = link_to "Like us on Facebook", "http://on.fb.me/1O4YULQ",
-                  :title => "Like us on Facebook",
-                  :class => "social-facebook"
+      %li.toggle-topbar.menu-icon
+        = link_to "#" do
+          %span Menu
+    %section.top-bar-section
+      %ul.left
+        %li= link_to "Home", "/"
+        %li= link_to "Student Work", "#"
+        %li= link_to "Faculty & Staff", "#"
+      %ul.right
+        %li.show-for-large-up
+          = link_to "http://on.fb.me/1O4YULQ",
+                    :title => "Like us on Facebook" do
+            %span.social-facebook Like us on Facebook
+        %li= link_to "Contact", "#"
