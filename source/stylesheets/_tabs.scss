@@ -1,6 +1,9 @@
 $tab-height: rem-calc(90px);
+$small-only-tab-height: rem-calc(60px);
 $tab-large-height: rem-calc(120px);
 $tab-offset: $tab-large-height - $tab-height;
+$tab-font-size: 2rem;
+$small-only-tab-font-size: 1.6rem;
 $arrow-head-angle: 135deg;
 $tab-horizontal-spacing: rem-calc(7px);
 $_arrow-head-tan: tan($arrow-head-angle / 2);
@@ -18,39 +21,40 @@ $tab-pointer-width: rem-calc(50px);
 $tab-pointer-height: rem-calc(20px);
 
 
-%arrow-column {
-  @extend .medium-#{12 / $medium-and-large-tabs-count};
-  @extend .small-12;
-  @extend .columns;
-}
-
-
 .arrow-tabs {
   @extend .row;
   position: relative;
-  height: $tab-height;
   vertical-align: middle;
-  padding: 0 $element-medium-spacing;
-  margin-bottom: $element-narrow-spacing + $tab-pointer-height;
 
   &:after {
-    @include pseudo-element;
-    @extend %arrow-column;
-    padding: 0;
-    opacity: 0;
-    margin-top: $element-narrow-spacing;
-    left: - $tab-pointer-width / 2;
-    @include triangle($color: $color-gallery,
-                      $height: $tab-pointer-height,
-                      $width: $tab-pointer-width,
-                      $angle: 0);
-    transition: margin-left $tab-pointer-transition-speed, opacity $tab-pointer-transition-speed; 
+    @extend .medium-#{12 / $medium-and-large-tabs-count};
   }
 
-  @for $i from 1 through $medium-and-large-tabs-count {
-    &[data-current-tab="#{$i}"]:after {
-      opacity: 1;
-      margin-left: ($i - .5) * 100% / $medium-and-large-tabs-count;
+  @include media-medium-up {
+    height: $tab-height;
+    padding: 0 $element-medium-spacing;
+    margin-bottom: $element-narrow-spacing + $tab-pointer-height;
+
+    &:after {
+      @include pseudo-element;
+      float: left;
+      position: relative;
+      padding: 0;
+      opacity: 0;
+      margin-top: $element-narrow-spacing;
+      left: - $tab-pointer-width / 2;
+      @include triangle($color: $color-gallery,
+                        $height: $tab-pointer-height,
+                        $width: $tab-pointer-width,
+                        $angle: 0);
+      transition: margin-left $tab-pointer-transition-speed, opacity $tab-pointer-transition-speed; 
+    }
+
+    @for $i from 1 through $medium-and-large-tabs-count {
+      &[data-current-tab="#{$i}"]:after {
+        opacity: 1;
+        margin-left: ($i - .5) * 100% / $medium-and-large-tabs-count;
+      }
     }
   }
 }
@@ -65,7 +69,9 @@ $tab-pointer-height: rem-calc(20px);
 
 
 .arrow-tab {
-  @extend %arrow-column;
+  @extend .medium-#{12 / $medium-and-large-tabs-count};
+  @extend .small-12;
+  @extend .columns;
   padding: 0;
 
   > a {
@@ -73,69 +79,84 @@ $tab-pointer-height: rem-calc(20px);
     position: relative;
     display: block;
     color: $color-white;
-    font-size: 2rem;
-    @include set-multiple($tab-height, height line-height);
+    font-size: $small-only-tab-font-size;
     text-align: center;
     text-transform: uppercase;
     background-color: $color-gallery;
-    background-clip: content-box;
-    padding: 0 $tab-horizontal-spacing + $arrow-width / 2;
-    z-index: 1;
+    @include set-multiple($small-only-tab-height, height line-height);
 
-    > .arrow-tab-title {
-      height: $tab-height;
-
-      &:before, &:after {
-        @include pseudo-element;
-        @include triangle($height: $tab-height,
-                          $width: $arrow-width,
-                          $angle: 90);
-        position: absolute;
-        top: 0;
-      }
-      &:before {
-        left: $tab-horizontal-spacing - $arrow-width / 2;
-        border-left-color: transparent;
-      }
-      &:after {
-        right: $tab-horizontal-spacing - $arrow-width / 2;
-      }
+    > .arrow-tab-title, > .arrow-tab-subtitle {
+      display: inline-block;
     }
 
     > .arrow-tab-subtitle {
-      position: absolute;
-      height: $tab-large-arrow-skew-height;
-      line-height: $tab-large-arrow-skew-height + $tab-subtitle-text-offset * 2;
-      top: - $tab-offset;
-      left: $tab-horizontal-spacing - $arrow-width / 2;
-      padding-left: $arrow-width;
-      padding-right: $tab-horizontal-spacing * 2; // $arrow-width + 2 * left
-      width: 100%;
-      font-size: .6em;
+      padding-right: $element-narrow-spacing;
+    }
+
+    @include media-medium-up {
+      @include set-multiple($tab-height, height line-height);
+      fount-size: $tab-font-size;
+      padding: 0 $tab-horizontal-spacing + $arrow-width / 2;
       background-clip: content-box;
-      &:before {
-        @include parallelogram-pseudo-element;
-        left: $tab-large-arrow-skew-horizontal-offset;
-        padding-right: $tab-horizontal-spacing * 2;
-        width: 100%;
-        z-index: -1;
-      }
-      @at-root :last-of-type#{&} {
-        &:after {
+      z-index: 1;
+
+      > .arrow-tab-title {
+        display: block;
+        height: $tab-height;
+
+        &:before, &:after {
           @include pseudo-element;
-          @include triangle($height: $tab-large-height,
-                            $width: $arrow-large-width,
+          @include triangle($height: $tab-height,
+                            $width: $arrow-width,
                             $angle: 90);
           position: absolute;
           top: 0;
-          right: $tab-horizontal-spacing * 2 - $arrow-large-width;
+        }
+        &:before {
+          left: $tab-horizontal-spacing - $arrow-width / 2;
+          border-left-color: transparent;
+        }
+        &:after {
+          right: $tab-horizontal-spacing - $arrow-width / 2;
+        }
+      }
+
+      > .arrow-tab-subtitle {
+        display: block;
+        position: absolute;
+        height: $tab-large-arrow-skew-height;
+        line-height: $tab-large-arrow-skew-height + $tab-subtitle-text-offset * 2;
+        top: - $tab-offset;
+        left: $tab-horizontal-spacing - $arrow-width / 2;
+        padding-left: $arrow-width;
+        padding-right: $tab-horizontal-spacing * 2; // $arrow-width + 2 * left
+        width: 100%;
+        font-size: .6em;
+        background-clip: content-box;
+        &:before {
+          @include parallelogram-pseudo-element;
+          left: $tab-large-arrow-skew-horizontal-offset;
+          padding-right: $tab-horizontal-spacing * 2;
+          width: 100%;
+          z-index: -1;
+        }
+        @at-root :last-of-type#{&} {
+          &:after {
+            @include pseudo-element;
+            @include triangle($height: $tab-large-height,
+                              $width: $arrow-large-width,
+                              $angle: 90);
+            position: absolute;
+            top: 0;
+            right: $tab-horizontal-spacing * 2 - $arrow-large-width;
+          }
         }
       }
     }
   }
 
-  &.arrow-tab-banner-end {
-    &:before {
+  @include media-medium-up {
+    &.arrow-tab-banner-end:before {
       @include parallelogram-pseudo-element;
       right: ($tab-horizontal-spacing + $arrow-width / 2) / 2;
       padding-right: $tab-horizontal-spacing * 2;
@@ -146,29 +167,35 @@ $tab-pointer-height: rem-calc(20px);
   }
 
   @mixin arrow-tab-bgcolor($color) {
-    > a > .arrow-tab-title {
+    > a {
       background-color: $color;
-      &:before {
-        @include set-multiple($color,
-                              border-top-color border-bottom-color);
-        box-shadow: 1px 0 $color;
+      @include media-medium-up {
+        background-color: transparent;
       }
-
-      &:after {
-        border-left-color: $color;
-        box-shadow: -1px 0 $color;
-      }
-    }
-    > a > .arrow-tab-subtitle {
-      @at-root :last-of-type#{&} {
+      > .arrow-tab-title {
         background-color: $color;
+        &:before {
+          @include set-multiple($color,
+                                border-top-color border-bottom-color);
+          box-shadow: 1px 0 $color;
+        }
+
         &:after {
           border-left-color: $color;
           box-shadow: -1px 0 $color;
         }
       }
-      &:before {
-        background-color: $color;
+      > .arrow-tab-subtitle {
+        @at-root :last-of-type#{&} {
+          background-color: $color;
+          &:after {
+            border-left-color: $color;
+            box-shadow: -1px 0 $color;
+          }
+        }
+        &:before {
+          background-color: $color;
+        }
       }
     }
   }
@@ -183,10 +210,12 @@ $tab-pointer-height: rem-calc(20px);
 
   &.arrow-tab-cta {
     @include arrow-tab-bgcolor($color-pear);
-    > a {
-      font-size: 2.4em;
-      &:hover > .arrow-tab-title {
-        @include anaglyph-3d(3px, 1px, 4px, $shadow-attr: text-shadow);
+    @include media-medium-up {
+      > a {
+        font-size: 2.4em;
+        &:hover > .arrow-tab-title {
+          @include anaglyph-3d(3px, 1px, 4px, $shadow-attr: text-shadow);
+        }
       }
     }
   }

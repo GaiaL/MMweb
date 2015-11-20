@@ -8,16 +8,10 @@ $navbar-triangle-width: rem-calc(20px);
 $header-height: $topbar-height + $element-medium-spacing * 2;
 $header-outer-height: $element-medium-spacing + sprite-height("logo");
 
-@mixin wide-topbar-only {
-  @media #{$topbar-media-query} {
-    @content
-  }
-}
-
 .header {
   background-color: $color-white;
   background-clip: content-box;
-  @include wide-topbar-only {
+  @include media-medium-up {
     overflow: hidden;
     padding-bottom: $header-outer-height - $header-height;
     margin-bottom: $header-height - $header-outer-height;
@@ -50,13 +44,13 @@ nav.top-bar {
   > li {
     @include set-multiple($element-medium-spacing,
                           margin-left margin-right);
-    @include wide-topbar-only {
+    @include media-medium-up {
       @include set-multiple(0, margin-left margin-right);
     }
   }
 
   > li.top-bar-logo {
-    @include wide-topbar-only {
+    @include media-medium-up {
       a {
         @include hide-text;
         @include use-sprite('logo');
@@ -90,12 +84,12 @@ nav.top-bar {
 .top-bar-section > ul > li > a {
   @include set-multiple($element-medium-spacing,
                         padding-left padding-right);
-  @include wide-topbar-only {
+  @include media-medium-up {
     @include set-multiple(0, padding-left padding-right);
   }
 }
 
-@include wide-topbar-only {
+@include media-medium-up {
   .top-bar-section > ul {
     > li {
       padding-left: $element-medium-spacing;

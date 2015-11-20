@@ -32,3 +32,9 @@
   #{$shadow-attr}: 0 - $horizontal-red-distance $vertical-red-distance $red,
                    $horizontal-cyan-distance 0 - $vertical-cyan-distance $cyan;
 }
+
+@mixin media-medium-up {
+  @media #{$medium-up} {
+    @content
+  }
+}
