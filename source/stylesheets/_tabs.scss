@@ -26,6 +26,10 @@ $tab-pointer-height: rem-calc(20px);
   position: relative;
   vertical-align: middle;
 
+  &.arrow-tabs-overlap {
+    margin-bottom: - $element-wide-spacing;
+  }
+
   &:after {
     @extend .medium-#{12 / $medium-and-large-tabs-count};
   }

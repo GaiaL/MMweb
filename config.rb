@@ -23,6 +23,8 @@
 # with_layout :admin do
 #   page "/admin/*"
 # end
+set :layout, :page
+page "/index.html", :layout => :layout
 
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
@@ -55,8 +57,6 @@ set :images_dir, 'images'
 
 set :fonts_dir, 'fonts'
 
-set :partials_dir, 'partials'
-
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -75,8 +75,10 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-
 set :haml, :format => :html5
+set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :smartypants => true
+set :markdown_engine, :redcarpet
+
 
 activate :bower
 bower_dir = 'vendor/assets/bower/'
@@ -96,4 +98,18 @@ sprockets.append_path Pathname.new('../' + npm_dir)  # relative to source/
 
 compass_config do |config|
   config.add_import_path File.expand_path(npm_dir)
+end
+
+activate :blog do |blog|
+  # set options on blog
+  blog.default_extension = '.md'
+  # blog.day_link = '/{year}/{month}/{day}/index.html'
+  # blog.month_link = '/{year}/{month}/index.html'
+  # blog.year_link = '/{year}/index.html'
+  # blog.taglink = '/tags/{tag}/index.html'
+  blog.permalink = '/{title}/index.html'
+  blog.sources = '/pages/{title}.html'
+  blog.layout = 'page'
+  blog.prefix = ''
+  blog.new_article_template = 'source/layouts/new-page.tt'
 end

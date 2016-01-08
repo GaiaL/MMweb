@@ -14,3 +14,7 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
 gem "middleman-bower"
+gem "middleman-blog"
+gem "redcarpet"
+gem 'less'
+gem 'therubyracer'

@@ -8,10 +8,17 @@ $hero-caption-vertical-margin: 20%;
 $hero-caption-horizontal-margin: 20%;
 $hero-caption-title-size: rem-calc(32px);
 
-.hero-container {
+.hero-container, .hero-container-half {
   position: relative;
-  height: $hero-large-height;
   overflow: hidden;
+}
+
+.hero-container-half {
+  height: $hero-large-height / 2;
+}
+
+.hero-container {
+  height: $hero-large-height;
 
   &.slick-initialized {
     overflow: visible;

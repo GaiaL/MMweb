@@ -1,0 +1,12 @@
+= wrap_layout :layout do
+  %section.hero-container-half
+    %div
+      =image_tag "bg1.jpg"
+  %section.arrow-tabs.arrow-tabs-overlap
+    .arrow-tab.arrow-tab-cta.right
+      = link_to "#" do
+        .arrow-tab-subtitle Start This Fall
+        .arrow-tab-title Apply
+  %section.article-content
+    %article.article-content-text
+      = yield

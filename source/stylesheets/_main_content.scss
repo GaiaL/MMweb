@@ -2,37 +2,11 @@
   @extend .row;
   margin-top: $element-section-spacing;
   background-color: $color-gallery;
-  position: relative;
-  &:before {
-    @include pseudo-element;
-    position: absolute;
-    box-sizing: content-box;
-    height: 100%;
-    width: 100%;
-    padding: rem-calc(8px 3px);
-    background-color: $color-cyan;
-    z-index: -1;
-    mix-blend-mode: multiply;
-    top: rem-calc(-4px);
-    left: rem-calc(-6px);
-  }
+  @extend %border-3d-outer;
 }
 
 .main-content-text {
-  position: relative;
-  &:before {
-    @include pseudo-element;
-    position: absolute;
-    box-sizing: content-box;
-    height: 100%;
-    width: 100%;
-    padding: rem-calc(6px 4px);
-    background-color: $color-carnation;
-    z-index: -1;
-    mix-blend-mode: multiply;
-    top: rem-calc(-10px);
-    right: rem-calc(-8px);
-  }
+  @extend %border-3d-inner;
 }
 
 .main-content-sidebar {
@@ -69,8 +43,4 @@
   @extend %general-content;
 
   padding: $element-wide-spacing $element-medium-spacing;
-
-  > h3 {
-    color: $color-pear;
-  }
 }

@@ -27,15 +27,8 @@
 
   @extend %general-content;
 
-  > h2 {
-    color: $color-tuatara;
-    &:hover {
-      @include anaglyph-3d(1px, 1px, 2px, 0, $shadow-attr: text-shadow);
-    }
-  }
-
   > .sub-title {
-    color: $color-pear;
+    color: $color-scooter;
     font-weight: 700;
   }
 

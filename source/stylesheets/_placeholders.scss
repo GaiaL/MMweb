@@ -5,19 +5,64 @@
                      $width: 12);
 }
 
+%border-3d-outer {
+  position: relative;
+  &:before {
+    @include pseudo-element;
+    position: absolute;
+    box-sizing: content-box;
+    height: 100%;
+    width: 100%;
+    padding: rem-calc(8px 3px);
+    background-color: $color-cyan;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    top: rem-calc(-4px);
+    left: rem-calc(-6px);
+  }
+}
+
+%border-3d-inner {
+  position: relative;
+  &:before {
+    @include pseudo-element;
+    position: absolute;
+    box-sizing: content-box;
+    height: 100%;
+    width: 100%;
+    padding: rem-calc(6px 4px);
+    background-color: $color-carnation;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    top: rem-calc(-10px);
+    right: rem-calc(-8px);
+  }
+}
+
 %general-content {
 
   > h2 {
     font-size: 1.4rem;
     text-transform: uppercase;
+    color: $color-tuatara;
+    &:hover {
+      @include anaglyph-3d(1px, 1px, 2px, 0, $shadow-attr: text-shadow);
+    }
   }
 
   > h3 {
     font-size: 1.3rem;
+    color: $color-scooter;
+  }
+
+  > h4 {
+    font-size: 1rem;
+    color: $color-carnation;
   }
 
   > h2, > h3, > h4, > h5, > h6 {
-    margin-bottom: $element-medium-spacing;
+    margin-top: $element-medium-spacing;
+    margin-bottom: $element-narrow-spacing;
   }
   >p {
     color: $color-tuatara;

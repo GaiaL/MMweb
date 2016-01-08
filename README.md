@@ -42,3 +42,10 @@ To build a release:
 ```bash
 middleman build
 ```
+
+To add a new article:
+```bash
+middleman article TITLE
+```
+
+The result will show the path to the page source so you can edit it.
