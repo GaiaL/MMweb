@@ -78,7 +78,7 @@ end
 set :haml, :format => :html5
 set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :smartypants => true
 set :markdown_engine, :redcarpet
-
+set :relative_links, true
 
 activate :bower
 bower_dir = 'vendor/assets/bower/'
@@ -112,4 +112,10 @@ activate :blog do |blog|
   blog.layout = 'page'
   blog.prefix = ''
   blog.new_article_template = 'source/layouts/new-page.tt'
+end
+
+helpers do
+  def article filename
+    blog.articles.select { |article| article.source_file.end_with? "/#{filename}" }[0]
+  end
 end
