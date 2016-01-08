@@ -6,26 +6,25 @@
 
 .tab-content-video {
   @extend .large-7;
-  @extend .medium-6;
+  @extend .medium-5;
   @extend .small-12;
   float: right;
   position: relative;
+  margin-left: $element-wide-spacing;
+  margin-bottom: $element-wide-spacing;
   > .video-wrapper {
     @include intrinsic-ratio;
+  }
+  @include media-medium-up {
+    margin-bottom: 0;
   }
 }
 
 .tab-content-text {
-
-  @extend .large-5;
-  @extend .medium-6;
-  @extend .small-12;
   @include set-multiple($element-medium-spacing,
                         padding-top padding-bottom);
   padding-left: $element-medium-spacing;
   padding-right: $element-wide-spacing;
-
-  @extend %general-content;
 
   > .sub-title {
     color: $color-scooter;

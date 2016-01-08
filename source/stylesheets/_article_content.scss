@@ -7,7 +7,6 @@
 
 .article-content-text {
   @extend .large-12;
-  @extend %general-content;
   @extend %border-3d-inner;
   padding: $element-medium-spacing * 2 $element-wide-spacing $element-wide-spacing;
 }

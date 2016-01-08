@@ -1,0 +1,62 @@
+.general-content {
+
+  > h2 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: $color-tuatara;
+    &:hover {
+      @include anaglyph-3d(1px, 1px, 2px, 0, $shadow-attr: text-shadow);
+    }
+  }
+
+  > h3 {
+    font-size: 1.3rem;
+    color: $color-scooter;
+  }
+
+  > h4 {
+    font-size: 1rem;
+    color: $color-carnation;
+  }
+
+  > h2, > h3, > h4, > h5, > h6 {
+    margin-top: $element-medium-spacing;
+    margin-bottom: $element-narrow-spacing;
+  }
+  >p {
+    color: $color-tuatara;
+    margin-bottom: $element-narrow-spacing;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  a.collapsible-more {
+    margin-left: $element-narrow-spacing;
+  }
+
+  .collapsible {
+    display: none;
+    &.expanded {
+      display: block;
+    }
+  }
+
+  blockquote {
+    > p:first-child {
+      margin-top: 0;
+    }
+  }
+
+  a {
+    color: $color-carnation;
+    &:hover {
+      @extend %cyan-underline;
+    }
+  }
+
+  u {
+    @extend %cyan-underline;
+  }
+}

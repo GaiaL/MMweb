@@ -5,10 +5,6 @@
   @extend %border-3d-outer;
 }
 
-.main-content-text {
-  @extend %border-3d-inner;
-}
-
 .main-content-sidebar {
   @extend .large-5;
   @extend .medium-6;
@@ -20,14 +16,7 @@
   > .sidebar-items {
     > li {
       list-style-type: none;
-      .item-date {
-        display: inline-block;
-        color: $color-persian-pink;
-        &:after {
-          content: ':';
-        }
-      }
-      .item-title {
+      a {
         display: inline-block;
         color: $color-scooter;
       }
@@ -40,7 +29,7 @@
   @extend .medium-6;
   @extend .small-12;
   @extend .column;
-  @extend %general-content;
+  @extend %border-3d-inner;
 
   padding: $element-wide-spacing $element-medium-spacing;
 }

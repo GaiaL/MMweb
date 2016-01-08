@@ -1,0 +1,73 @@
+= wrap_layout :layout do
+  %section.hero-container
+    %div
+      =image_tag "bg1.jpg"
+      .hero-caption.hero-caption-top-left
+        %p.hero-caption-title
+          = lorem.words(2)
+        %p
+          = lorem.sentences 3
+        %p
+          = succeed '...' do
+            = link_to 'Read more', '#'
+    %div
+      =image_tag "bg2.jpg"
+      .hero-caption.hero-caption-bottom-left
+        %p.hero-caption-title
+          = lorem.words(2)
+        %p
+          = lorem.sentences 3
+        %p
+          = succeed '...' do
+            = link_to 'Continue read', '#'
+    %div
+      =image_tag "bg3.jpg"
+      .hero-caption.hero-caption-top-right
+        %p.hero-caption-title
+          = lorem.words(2)
+        %p
+          = lorem.sentences 3
+        %p
+          = succeed '...' do
+            = link_to 'Read more', '#'
+    %div
+      =image_tag "bg4.jpg"
+      .hero-caption.hero-caption-bottom-right
+        %p.hero-caption-title
+          = lorem.words(2)
+        %p
+          = lorem.sentences 3
+        %p
+          = succeed '...' do
+            = link_to 'Read more', '#'
+    %div
+      =image_tag "bg5.jpg"
+    %div
+      =image_tag "bg6.jpg"
+  
+  %section.arrow-tabs(data-current-tab="#{current_page.data.tabindex}")
+    .arrow-tab
+      = link_to "/index.html" do
+        .arrow-tab-title Overview
+    .arrow-tab.arrow-tab-banner-end
+      = link_to "/admission/index.html" do
+        .arrow-tab-title Admission
+    .arrow-tab.arrow-tab-cta
+      = link_to "#" do
+        .arrow-tab-subtitle Start This Fall
+        .arrow-tab-title Apply
+
+  %section.tab-content
+    - if current_page.data.tab_content_video
+      .tab-content-video
+        .video-wrapper
+          %iframe(src="#{current_page.data.tab_content_video}" frameborder="0" allowfullscreen)
+    .tab-content-text.general-content
+      =partial current_page.data.tab_content
+  
+  %section.main-content
+    %nav.main-content-sidebar
+      =partial current_page.data.main_content_sidebar
+  
+    %article.main-content-text.general-content
+      =partial current_page.data.main_content

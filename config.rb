@@ -24,7 +24,6 @@
 #   page "/admin/*"
 # end
 set :layout, :page
-page "/index.html", :layout => :layout
 
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
@@ -76,8 +75,7 @@ configure :build do
 end
 
 set :haml, :format => :html5
-set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :smartypants => true
-set :markdown_engine, :redcarpet
+set :markdown_engine, :kramdown
 set :relative_links, true
 
 activate :bower
@@ -119,3 +117,5 @@ helpers do
     blog.articles.select { |article| article.source_file.end_with? "/#{filename}" }[0]
   end
 end
+
+ignore "contents/*"

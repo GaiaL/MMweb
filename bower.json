@@ -19,6 +19,7 @@
   "dependencies": {
     "francois-one": "http://www.fontsquirrel.com/fontfacekit/francois-one",
     "news-cycle": "http://www.fontsquirrel.com/fontfacekit/news-cycle",
+    "pace": "https://github.com/HubSpot/pace.git#1.0.2",
     "Retina-sprites-for-Compass": "*"
   }
 }
