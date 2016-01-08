@@ -14,11 +14,16 @@
   padding: $element-wide-spacing $element-medium-spacing;
 
   > .sidebar-items {
+    margin-top: $element-medium-spacing;
     > li {
       list-style-type: none;
       a {
         display: inline-block;
-        color: $color-scooter;
+        color: $color-carnation;
+        &:hover {
+          background-color: $color-cyan;
+          color: $color-white;
+        }
       }
     }
   }
