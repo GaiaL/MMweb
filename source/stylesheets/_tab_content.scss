@@ -25,19 +25,4 @@
                         padding-top padding-bottom);
   padding-left: $element-medium-spacing;
   padding-right: $element-wide-spacing;
-
-  > .sub-title {
-    color: $color-scooter;
-    font-weight: 700;
-  }
-
-  > h2 + .sub-title {
-    position: relative;
-    margin-top: -$element-narrow-spacing;
-  }
-
-  a.tab-content-read-more {
-    font-weight: 700;
-    text-transform: uppercase;
-  }
 }

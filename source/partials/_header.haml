@@ -9,11 +9,11 @@
     %section.top-bar-section
       %ul.left
         %li= link_to "Home", "/index.html"
-        %li= link_to "Student Work", "#"
-        %li= link_to "Faculty & Staff", "#"
+        %li= link_to "Student Work", article("student-works")
+        %li= link_to "Faculty & Staff", article("faculty")
       %ul.right
         %li.show-for-medium-up
           = link_to "http://on.fb.me/1O4YULQ",
                     :title => "Like us on Facebook" do
             %span.social-facebook Like us on Facebook
-        %li= link_to "Contact", "#"
+        %li= link_to "Contact", article("contact")

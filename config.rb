@@ -114,7 +114,7 @@ end
 
 helpers do
   def article filename
-    blog.articles.select { |article| article.source_file.end_with? "/#{filename}" }[0]
+    blog.articles.select { |article| article.source_file.end_with? "/#{filename}.html.md" }[0]
   end
 end
 

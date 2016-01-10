@@ -6,7 +6,24 @@
     color: $color-tuatara;
     &:hover {
       @include anaglyph-3d(1px, 1px, 2px, 0, $shadow-attr: text-shadow);
+      > small {
+        text-shadow: none;
+      }
     }
+  }
+
+  > h2 > small {
+    @include font-news-cycle;
+    display: block;
+    color: $color-scooter;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 1rem;
+    line-height: 1em;
+    &:hover {
+      text-shadow: none;
+    }
+    padding: $element-narrow-spacing / 2 0;
   }
 
   > h3 {
@@ -54,6 +71,11 @@
     &:hover {
       @extend %cyan-underline;
     }
+  }
+
+  strong a, a strong {
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
   u {
