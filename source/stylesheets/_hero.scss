@@ -136,6 +136,7 @@ $hero-caption-title-size: rem-calc(32px);
         border: none;
         border-radius: $hero-bullet-size / 2;  
         margin: $hero-bullet-spacing;
+        outline: none;
         padding: 0;
         z-index: 1;
       }
