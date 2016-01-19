@@ -11,14 +11,14 @@
     .footer-column
       %ul
         %li= link_to "Home", "/index.html"
-        %li= link_to "Student Work", article("student-works")
-        %li= link_to "Facilities", article("facilities")
-        %li= link_to "Faculty", article("faculty")
+        %li= link_to_article "student-works", "Student Works"
+        %li= link_to_article "facilities", "Facilities"
+        %li= link_to_article "faculty", "Faculty"
     .footer-column
       %ul
-        %li= link_to "Curriculum", article("curriculum")
+        %li= link_to_article "curriculum", "Curriculum"
         %li= link_to "Apply", "#"
-        %li= link_to "Contact", article("contact")
+        %li= link_to_article "contact", "Contact"
     .footer-column
       %ul.footer-social-networks
         %li

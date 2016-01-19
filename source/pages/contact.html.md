@@ -1,5 +1,5 @@
 ---
-title: "Contact US"
+title: "Contact Us"
 date: 2016-01-10 12:43 UTC
 ---
 ## Contact Us
