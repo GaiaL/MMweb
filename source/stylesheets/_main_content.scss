@@ -1,20 +1,74 @@
+$hr-dotted-diameter: 4px;
+
 .main-content {
   @extend .row;
-  margin-top: $element-section-spacing;
   background-color: $color-gallery;
-  @extend %border-3d-outer;
+  position: relative;
+  &:before {
+    @include pseudo-element;
+    @include border-3d($color-cyan);
+    padding: rem-calc(1px 6px 2px);
+    top: rem-calc(8px);
+    left: rem-calc(-8px);
+  }
+
+  &:after {
+    @include border-3d($color-carnation, $width: null);
+    padding: rem-calc(6px 4px);
+    top: rem-calc(-6px);
+    right: rem-calc(-10px);
+  }
+
+  .top-content-video {
+    @extend .large-7;
+    @extend .medium-6;
+    @extend .small-12;
+    float: right;
+    position: relative;
+    margin-left: $element-wide-spacing;
+    margin-bottom: $element-wide-spacing;
+    z-index: 1;
+    > .video-wrapper {
+      @include intrinsic-ratio;
+    }
+    @include media-medium-up {
+      margin-bottom: 0;
+    }
+  }
+
+  .top-content-text {
+    padding-top: $element-medium-spacing;
+    padding-left: $element-medium-spacing;
+    padding-right: $element-wide-spacing;
+  }
+
+  hr {
+    margin: 0 $element-medium-spacing;
+    border-top: $hr-dotted-diameter dotted $color-carnation;
+    top: -$hr-dotted-diameter;
+    position: relative;
+  }
+}
+
+.main-content:after, .main-content-sidebar {
+  @extend .large-4;
+  @extend .medium-6;
+  @extend .small-12;
 }
 
 .main-content-sidebar {
-  @extend .large-5;
-  @extend .medium-6;
-  @extend .small-12;
   @extend .column;
 
   padding: $element-wide-spacing $element-medium-spacing;
+  background-color: $color-white;
+  background-clip: content-box;
+
+  > h3, >ul {
+    margin-left: $element-medium-spacing;
+  }
 
   > .sidebar-items {
-    margin-top: $element-medium-spacing;
+    margin-top: $element-narrow-spacing;
     > li {
       list-style-type: none;
       a {
@@ -30,11 +84,10 @@
 }
 
 .main-content-text {
-  @extend .large-7;
+  @extend .large-8;
   @extend .medium-6;
   @extend .small-12;
   @extend .column;
-  @extend %border-3d-inner;
 
   padding: $element-wide-spacing $element-medium-spacing;
 }

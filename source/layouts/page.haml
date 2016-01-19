@@ -7,6 +7,9 @@
       = link_to "#" do
         .arrow-tab-subtitle Start This Fall
         .arrow-tab-title Apply
-  %section.article-content
-    .article-content-text.general-content
+  %section.main-content
+    .main-content-text.general-content
       = yield
+    %nav.main-content-sidebar.general-content
+      =partial (current_page.data.respond_to? :main_content_sidebar) ? current_page.data.main_content_sidebar : "contents/main_content_sidebar"
+    .clearfix

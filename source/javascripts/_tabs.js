@@ -8,7 +8,7 @@
     $arrowTabs.attr('data-current-tab', $this.index() + 1);  // index start from 0
     $('<div>').load(url, function() {
       var $this = $(this),
-          page_title = $this.text();
+          page_title = $this.find('#_page_title').text();
       document.title = page_title;
       history.pushState(null, page_title, url);
       $('.tab-content').replaceWith($this.find('.tab-content'));

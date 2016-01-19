@@ -28,6 +28,9 @@ $tab-pointer-height: rem-calc(20px);
 
   &.arrow-tabs-overlap {
     margin-bottom: - $element-wide-spacing;
+    &::after {
+      display: none;
+    }
   }
 
   &:after {

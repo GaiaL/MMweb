@@ -57,17 +57,21 @@
         .arrow-tab-subtitle Start This Fall
         .arrow-tab-title Apply
 
-  %section.tab-content
+  %section.main-content
     - if current_page.data.tab_content_video
-      .tab-content-video
+      .top-content-video
         .video-wrapper
           %iframe(src="#{current_page.data.tab_content_video}" frameborder="0" allowfullscreen)
-    .tab-content-text.general-content
+
+    .top-content-text.general-content
       =partial current_page.data.tab_content
-  
-  %section.main-content
-    %nav.main-content-sidebar
-      =partial current_page.data.main_content_sidebar
-  
+
+    %hr
+
     .main-content-text.general-content
       =partial current_page.data.main_content
+
+    %nav.main-content-sidebar.general-content
+      =partial current_page.data.main_content_sidebar
+
+    .clearfix

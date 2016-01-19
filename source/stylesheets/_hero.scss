@@ -5,7 +5,7 @@ $hero-bullet-size: rem-calc(12px);
 $hero-bullet-spacing: rem-calc(4px);
 $hero-caption-background-opacity: .6;
 $hero-caption-vertical-margin: 20%;
-$hero-caption-horizontal-margin: 20%;
+$hero-caption-width: 40rem;
 $hero-caption-title-size: rem-calc(32px);
 
 .hero-container, .hero-container-half {
@@ -32,6 +32,11 @@ $hero-caption-title-size: rem-calc(32px);
   .slick-slide {
     height: $hero-large-height;
     position: relative;
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      min-width: $row-width;
+    }
   }
 
   .hero-caption {
@@ -40,8 +45,9 @@ $hero-caption-title-size: rem-calc(32px);
     color: $color-white;
     @include font-news-cycle;
     background-color: rgba($color-tuatara, $hero-caption-background-opacity);
-    width: 40rem;
+    width: $hero-caption-width;
     max-width: 60vw;
+    left: 50%;
 
     > .hero-caption-title {
       color: $color-cyan;
@@ -76,7 +82,7 @@ $hero-caption-title-size: rem-calc(32px);
   }
 
   .hero-caption-top-left, .hero-caption-bottom-left {
-    left: $hero-caption-horizontal-margin;
+    margin-left: -$hero-caption-width * (.5 + .2);
   }
 
   .hero-caption-bottom-left, .hero-caption-bottom-right {
@@ -84,7 +90,7 @@ $hero-caption-title-size: rem-calc(32px);
   }
 
   .hero-caption-top-right, .hero-caption-bottom-right {
-    right: $hero-caption-horizontal-margin;
+    margin-left: -$hero-caption-width * (.5 - .2);
   }
 
   .slick-arrow {
