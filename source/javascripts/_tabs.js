@@ -11,7 +11,6 @@
           page_title = $this.find('#_page_title').text();
       document.title = page_title;
       history.pushState(null, page_title, url);
-      $('.tab-content').replaceWith($this.find('.tab-content'));
       $('.main-content').replaceWith($this.find('.main-content'));
       $(window).trigger('_tabload');
     });

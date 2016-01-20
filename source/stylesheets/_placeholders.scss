@@ -4,23 +4,3 @@
                      $distance: .6,
                      $width: 12);
 }
-
-%border-3d-outer {
-  position: relative;
-  &:before {
-    @include border-3d($color-cyan);
-    padding: rem-calc(8px 3px);
-    top: rem-calc(-4px);
-    left: rem-calc(-6px);
-  }
-}
-
-%border-3d-inner {
-  position: relative;
-  &:before {
-    @include border-3d($color-carnation);
-    padding: rem-calc(6px 4px);
-    top: rem-calc(-10px);
-    right: rem-calc(-8px);
-  }
-}
