@@ -3,6 +3,7 @@ sudo: false
 env:
   - |-
     OWNER_NAME=$(echo $TRAVIS_REPO_SLUG | awk -F '/' '{print $1}')
+    REPO_ID_CSUEBMMG="22eeb8333793"
     REPO_ID_philiptzou="3a03254beac3"
     BUILD_MESSAGE="build(${TRAVIS_COMMIT}): $(git log --format=%B -n 1 $TRAVIS_COMMIT)"
     BUILD_USER_NAME="$(git log --format=%aN -n 1 $TRAVIS_COMMIT)"
