@@ -147,6 +147,6 @@ Now you have finished configuration of automatically building. You can see
 the result at [https://travis-ci.org/example/MMweb](#).
 
 [fork-a-repo]: https://help.github.com/articles/fork-a-repo/
-[travis-get-started]: https://docs.Travis CI.com/user/getting-started/
+[travis-get-started]: https://docs.travis-ci.com/user/getting-started/
 [deploy-key]: https://developer.github.com/guides/managing-deploy-keys/
-[https://docs.travis-ci.com/user/encrypting-files/
+[travis-encrypt-file]: https://docs.travis-ci.com/user/encrypting-files/
