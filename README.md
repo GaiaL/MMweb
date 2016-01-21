@@ -1,6 +1,9 @@
 MMweb
 =====
 
+[![Travis CI](https://travis-ci.org/CSUEBMMG/MMweb.svg)](https://travis-ci.org/CSUEBMMG/MMweb)
+
+GH page: http://csuebmmg.github.io/MMweb/
 
 Installation
 ------------
