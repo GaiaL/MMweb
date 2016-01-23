@@ -4,17 +4,8 @@ date: 2016-01-10 12:19 UTC
 ---
 ## Facilities & Resources
 
-In January of 2007, California State University, East Bay opened its new Valley Business and Technology Center. In JanuaEvery multimedia graduate thesis project student has 24/7 hour access to their own state of the art production suites. Our multimedia production facilities are the best in the country and our fee requirements make us the best educational bargain. Please come by and see for yourself.
+First year students have access to facilities 24 hours a day which includes 3d printers, plotters, c&c mills and a 60 watt laser cutter. Students also have access to a woodshop, a bronze foundry and a Television studio.
 
-### VBT Building Gallery 
-Each year, a graduate team produces an interactive project that employs three 46" L.C.D. monitors.
+By the second year students have access to a research lab with private and secure work areas, a 4k video editing suite, more printers and plotters, vynil cutters and 3D Printers.  The department is also comitted to making available high-end equipment such as RED cameras and a wide variety of other tools.
 
-### Production Suites
-Second year students have 24/7 access to their own high-end production suite for one year.
-
-### First Year
-First year students also have their own lab facilities where Multimedia Graduate classes are taught.
-
-### Plasma Wall
-Each year, graduate teams have the opportunity to create projects utilizing our plasma screen wall.
 
