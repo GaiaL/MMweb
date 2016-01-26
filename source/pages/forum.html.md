@@ -9,13 +9,11 @@ The Multimedia Graduate Program at California State University East Bay hosts a 
 
 The forum runs on alternate Thursday nights from 700pm to 930pm and the sessions can be broken up into presentation, and interactive segments as needed.
 
-Past speakers have included
+*Past speakers have included:*
 
-Morehshin Allahyari
-
-Peter Angstadt
-
-Craig Baldwin
+**Morehshin Allahyari**
+**Peter Angstadt**
+**Craig Baldwin**
 
 Melinda Barlow
 Mark Beam
