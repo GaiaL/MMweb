@@ -21,7 +21,7 @@ brew install node npm
 npm install bower -g
 
 cd MMweb
-gem install bundle -g
+gem install bundle
 bundle
 bower install
 npm install
