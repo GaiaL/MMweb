@@ -11,9 +11,12 @@ The forum runs on alternate Thursday nights from 700pm to 930pm and the sessions
 
 Past speakers have included
 
-Morehshin Allahyari 
+Morehshin Allahyari
+
 Peter Angstadt
+
 Craig Baldwin
+
 Melinda Barlow
 Mark Beam
 Michael Becker
