@@ -21,6 +21,8 @@ brew install node npm
 npm install bower -g
 
 cd MMweb
+# Note: MMweb is the location of this repository,
+# clone it if you haven't before running the following commands
 gem install bundle
 bundle
 bower install
