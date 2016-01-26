@@ -7,7 +7,10 @@ Forum
 
 The Multimedia Graduate Program at California State University East Bay hosts a speaker series called the Forum to which we invite accomplished artists and media makers to speak with our graduate students about their work and research.  
 
-The forum runs on alternate Thursday nights from 700pm to 930pm and the sessions can be broken up into presentation, and interactive segments as needed.
+The forum runs on alternate Thursday nights from 7:00pm to 9:30pm and the sessions can be broken up into presentation, and interactive segments as needed.
+
+We are always excited to feature established and emerging creative talents in our talks. If you have a proposal for a presentation and want to join us, please send a one paragraph description of your talk and a current CV to multimedia [at] csueastbay.edu with the subject heading FORUM.
+
 
 *Past speakers have included:*
 
