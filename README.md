@@ -14,6 +14,9 @@ dependencies in different systems.
 
 ### MacOSX
 
+Assume you have installed brew, git and agreed Xcode license before running
+following commands:
+
 ```bash
 curl -sSL https://get.rvm.io | bash -s stable
 rvm install ruby-2.2.3
@@ -28,6 +31,22 @@ bundle
 bower install
 npm install
 ```
+
+#### FAQ
+
+- Bundle reports that installation of "eventmachine" is failed and is because
+  file 'openssl/ssl.h' is not found according to its traceback:
+  
+  This seems a problem which only appears on OS X El Capitan which may due to
+  Apple removes OpenSSL in favor of its own TLS and crypto libraries.
+  
+  The solution here is simple, run these two commands before
+  bundle<sup>[[1]][so-eventmachine]</sup>:
+  
+  ```bash
+  brew install openssl
+  bundle config build.eventmachine --with-cppflags=-I/usr/local/opt/openssl/include
+  ```
 
 Development
 -----------
@@ -148,6 +167,7 @@ git push
 Now you have finished configuration of automatically building. You can see
 the result at [https://travis-ci.org/example/MMweb](#).
 
+[so-eventmachine]: http://stackoverflow.com/a/30836309/2644759
 [fork-a-repo]: https://help.github.com/articles/fork-a-repo/
 [travis-get-started]: https://docs.travis-ci.com/user/getting-started/
 [deploy-key]: https://developer.github.com/guides/managing-deploy-keys/
