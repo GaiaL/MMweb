@@ -1,6 +1,7 @@
 ---
 title: "Game Jam"
 date: 2016-01-19 10:50 UTC
+heroimage: bg1.jpg
 ---
 Game Jam
 ----

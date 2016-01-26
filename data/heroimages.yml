@@ -1,0 +1,61 @@
+# Usage:
+#
+# Please follow the syntax rules of writing a
+# [YAML](http://www.yaml.org/) configure file.
+#
+# - `src`: Required, string, image name.
+#   Note: All images must be located in source/images
+#
+# - `caption`: Optional. Display the caption box if presented.
+#
+#   - `position`: Required if `caption` presented, string.
+#     Position of the caption box. Available choices:
+#     top-left (default), top-right, bottom-left, bottom-right
+#
+#   - `title`: Required if `caption` presented, string.
+#     Title line of the hero caption.
+#
+#   - `description`: Required if `caption` presented, string.
+#     Markdown formated description of hero caption.
+#
+#   - `link`: Optional. Display "Read more" link if presented.
+#
+#     - `url`: Required if `link` presented and no `article` exists. Any
+#       URL is okay. This will be the href attribute of "Read more" link.
+#
+#     - `article`: Required if `link` presented and no `url` exists. Any
+#       page in source/pages can be linked (without the .html.md extension).
+#
+#     - `title`: Optional.
+#       The content of the link. Default to article title or "Read more".
+-
+  src: "bg1.jpg"
+  caption:
+    position: top-left
+    title: Title A
+    description: Description A
+    link:
+      url: '#'
+-
+  src: "bg2.jpg"
+  caption:
+    position: bottom-right
+    title: Student Work
+    description: Description B
+    link:
+      article: student-works
+      title: 'Continue read'
+-
+  src: "bg3.jpg"
+  caption:
+    position: bottom-left
+    title: People
+    description: people [blah](http://example.com) blah blah blah blah blah
+    link:
+     article: people
+-
+  src: "bg4.jpg"
+-
+  src: "bg5.jpg"
+-
+  src: "bg6.jpg"

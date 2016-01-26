@@ -1,49 +1,21 @@
 = wrap_layout :layout do
   %section.hero-container
-    %div
-      =image_tag "bg1.jpg"
-      .hero-caption.hero-caption-top-left
-        %p.hero-caption-title
-          = lorem.words(2)
-        %p
-          = lorem.sentences 3
-        %p
-          = succeed '...' do
-            = link_to 'Read more', '#'
-    %div
-      =image_tag "bg2.jpg"
-      .hero-caption.hero-caption-bottom-left
-        %p.hero-caption-title
-          = lorem.words(2)
-        %p
-          = lorem.sentences 3
-        %p
-          = succeed '...' do
-            = link_to 'Continue read', '#'
-    %div
-      =image_tag "bg3.jpg"
-      .hero-caption.hero-caption-top-right
-        %p.hero-caption-title
-          = lorem.words(2)
-        %p
-          = lorem.sentences 3
-        %p
-          = succeed '...' do
-            = link_to 'Read more', '#'
-    %div
-      =image_tag "bg4.jpg"
-      .hero-caption.hero-caption-bottom-right
-        %p.hero-caption-title
-          = lorem.words(2)
-        %p
-          = lorem.sentences 3
-        %p
-          = succeed '...' do
-            = link_to 'Read more', '#'
-    %div
-      =image_tag "bg5.jpg"
-    %div
-      =image_tag "bg6.jpg"
+    - data.heroimages.each do |img|
+      %div
+        =image_tag img.src
+        - if img.caption
+          .hero-caption(class="hero-caption-#{img.caption.position || 'top-left'}")
+            %p.hero-caption-title
+              = img.caption.title
+            :markdown
+              #{img.caption.description}
+            - if img.caption.link
+              %p
+                = succeed '...' do
+                  - if img.caption.link.article
+                    = link_to_article img.caption.link.article, img.caption.link.title || nil
+                  - else
+                    = link_to img.caption.link.title || 'Read more', img.caption.link.url
   
   %section.arrow-tabs(data-current-tab="#{current_page.data.tabindex}")
     .arrow-tab

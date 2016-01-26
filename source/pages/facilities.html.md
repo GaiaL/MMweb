@@ -1,6 +1,7 @@
 ---
 title: "Facilities & Resources"
 date: 2016-01-10 12:19 UTC
+heroimage: bg1.jpg
 ---
 ## Facilities & Resources
 

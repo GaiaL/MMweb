@@ -1,6 +1,7 @@
 ---
 title: "Thesis Projects and Other Student Works"
 date: 2016-01-10 12:21 UTC
+heroimage: bg1.jpg
 ---
 ## Thesis Projects <small>and Other Student Works</small>
 

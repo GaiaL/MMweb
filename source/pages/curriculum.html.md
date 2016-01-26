@@ -1,6 +1,7 @@
 ---
 title: 'Program Curriculum'
 date: 2016-01-08 06:20 UTC
+heroimage: bg1.jpg
 ---
 
 Program Curriculum

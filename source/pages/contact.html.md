@@ -1,6 +1,7 @@
 ---
 title: "Contact Us"
 date: 2016-01-10 12:43 UTC
+heroimage: bg1.jpg
 ---
 ## Contact Us
 

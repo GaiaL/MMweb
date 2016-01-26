@@ -75,6 +75,15 @@ middleman article TITLE
 The result will show the path to the page source so you can edit it.
 
 
+Edit
+----
+
+Most editable pages of this project is in Markdown format. But since we use
+[kramdown][kramdown] as our Markdown text parser, the syntax is a bit different
+with Github. Please see [kramdown Syntax][kramdown-syntax] for syntax
+instruction.
+
+
 Automatically Build with Travis CI
 ----------------------------------
 
@@ -168,6 +177,8 @@ Now you have finished configuration of automatically building. You can see
 the result at [https://travis-ci.org/example/MMweb](#).
 
 [so-eventmachine]: http://stackoverflow.com/a/30836309/2644759
+[kramdown]: http://kramdown.gettalong.org/
+[kramdown-syntax]: http://kramdown.gettalong.org/syntax.html
 [fork-a-repo]: https://help.github.com/articles/fork-a-repo/
 [travis-get-started]: https://docs.travis-ci.com/user/getting-started/
 [deploy-key]: https://developer.github.com/guides/managing-deploy-keys/

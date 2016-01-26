@@ -1,7 +1,7 @@
 = wrap_layout :layout do
   %section.hero-container-half
     %div
-      =image_tag "bg1.jpg"
+      =image_tag current_page.data.heroimage
   %section.arrow-tabs.arrow-tabs-overlap
     .arrow-tab.arrow-tab-cta.right
       = link_to "#" do
