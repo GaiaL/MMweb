@@ -11,7 +11,7 @@ Department and University applications for Fall Quarter 2016 Entry
 Information sessions for all who are interested in learning more about the program are scheduled once a month beginning in October. The Director presents an overview of the program, reviews the application process, presents samples of graduate student projects, a tour of the facilities and answers questions. If you want to attend an information session, please contact us.
 
 ### GRADUATE MULTIMEDIA PROGRAM INFORMATION SESSIONS
-FREE but please RSVP: http://bit.ly/1RqkBdF
+FREE but please [RSVP](http://bit.ly/1RqkBdF)
 
 Tuesday, January 26 2016 (7:00 PM to 8:30 PM) 
 
