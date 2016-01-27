@@ -19,5 +19,5 @@ Each year, the MM Grad program accepts students from diverse disciplines. As the
 
 * Show only your best work; the committee values quality over quantity
 * Refer to your portfolio in your statement of purpose
-* Call the program office with any questions: (510) 885-3204
+* Call the program office with any questions: (510) 936-2781 or email multimedia [at] csueastbay.edu
 * Download and review the [Portfolio Guidelines PDF](http://multimedia.csueastbay.edu/forms/portfolio-guidelines.pdf)
