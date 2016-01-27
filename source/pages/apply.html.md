@@ -8,11 +8,11 @@ There are two applications you must complete—one to the University and one to 
 Please complete both applications. Complete instructions are located [here](./admission.html).
 <ol>
 <li><h3>University Application</h3> 
-Complete and submit at http://www.csumentor.edu by June 15, 2016. 
+Complete and submit at http://www.csumentor.edu by June 15, 2016. </br>
 <i>For international applicants residing outside the U.S. the University application is due June 1, 2016.</i>
 </li>
 <li><h3>Department Application</h3>
-Complete and submit the online department application linked below. 
+Complete and submit the online department application linked below. </br>
 The deadline for department applications is June 15, 2016.
 </li>
 </ol>
