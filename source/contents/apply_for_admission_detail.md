@@ -28,4 +28,6 @@ The Multimedia Graduate Program at California State University, East Bay provide
 The information sessions are designed to give you a chance to tour the facilities and ask questions about applying to the program.
 
 ### WHERE
-Multimedia Graduate Office, Art & Education (AE) Building, Room 1231b, California State University, East Bay, 25800 Carlos Bee Blvd., Hayward
+Multimedia Graduate Office, Art & Education (AE) Building, Room 1231b, 
+
+California State University, East Bay, 25800 Carlos Bee Blvd., Hayward, CA
