@@ -12,11 +12,6 @@ Complete and submit at http://www.csumentor.edu by June 15, 2016. </br>
 <i>For international applicants residing outside the U.S. the University application is due June 1, 2016.</i>
 </li>
 <li><h3>Department Application</h3>
-Complete and submit the online department application linked below. </br>
-The deadline for department applications is June 15, 2016.
-</li>
-</ol>
-
 <script type="text/javascript" id="rbox-loader-script">
 if(!window._rbox){
 _rbox = { host_protocol:document.location.protocol, ready:function(cb){this.onready=cb;} };
@@ -28,4 +23,9 @@ _rbox = { host_protocol:document.location.protocol, ready:function(cb){this.onre
         t.parentNode.insertBefore(s, t.nextSibling);
     }})(document, 'script');
 }
-</script>
+</script> </br>
+The deadline for department applications is June 15, 2016.
+</li>
+</ol>
+
+
