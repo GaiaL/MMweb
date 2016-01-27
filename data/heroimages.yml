@@ -32,27 +32,29 @@
   src: "bg1.jpg"
   caption:
     position: top-left
-    title: Title A
-    description: Description A
-    link:
-      url: '#'
+    title: Head first toward career success
+    description: Creativity, innovation, and critical thinking about the intersection of technology and humanity at the Multimedia Graduate Program 
+    link: 
+      article: student-works
+      url: 'Read More...'
 -
   src: "bg2.jpg"
   caption:
     position: bottom-right
-    title: Student Work
-    description: Description B
+    title: Impressive ideas, innovative results
+    description: Freedom to experiment with new ideas and techniques for the development of digital artworks and products.
     link:
       article: student-works
-      title: 'Continue read'
+      title: 'Read More...'
 -
   src: "bg3.jpg"
   caption:
     position: bottom-left
-    title: People
-    description: people [blah](http://example.com) blah blah blah blah blah
+    title: Facilities & Resources
+    description: Every multimedia graduate thesis project student has 24/7 hour access to their own state of the art production suites. Our multimedia production facilities are the best in the country and our fee requirements make us the best educational bargain
     link:
-     article: people
+     article: facilities
+     title: 'Read More...'
 -
   src: "bg4.jpg"
 -
