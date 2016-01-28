@@ -13,5 +13,5 @@ Please complete both applications. Complete instructions are located [here](../a
    *For international applicants residing outside the U.S. the University application is due June 1, 2016.*
 
 2. ### Department Application
-   <script id="rbox-loader-script" data-expand-hash="#op-94231-masters-degree-in-multimedia"></script>
+   <script id="rbox-loader-script" data-expand-hash="#op-94231-masters-degree-in-multimedia" data-hide-back-links></script>
    The deadline for department applications is June 15, 2016.

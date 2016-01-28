@@ -1,6 +1,6 @@
 .general-content {
 
-  h2 {
+  h2, .rbox-widget h2 {
     font-size: 1.4rem;
     text-transform: uppercase;
     color: $color-tuatara;
@@ -9,6 +9,12 @@
       > small {
         text-shadow: none;
       }
+    }
+  }
+
+  #rbox-loader-script[data-hide-back-links] ~ .rbox-widget {
+    .rbox-top-links, .rbox-bottom-links {
+      display: none;
     }
   }
 
