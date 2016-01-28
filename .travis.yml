@@ -1,13 +1,15 @@
 language: ruby
 sudo: false
 env:
-  - |-
-    OWNER_NAME=$(echo $TRAVIS_REPO_SLUG | awk -F '/' '{print $1}')
-    REPO_ID_CSUEBMMG="22eeb8333793"
-    REPO_ID_philiptzou="3a03254beac3"
-    BUILD_MESSAGE="build(${TRAVIS_COMMIT}): $(git log --format=%B -n 1 $TRAVIS_COMMIT)"
-    BUILD_USER_NAME="$(git log --format=%aN -n 1 $TRAVIS_COMMIT)"
-    BUILD_USER_EMAIL="$(git log --format=%aE -n 1 $TRAVIS_COMMIT)"
+  global:
+    - |-
+      OWNER_NAME=$(echo $TRAVIS_REPO_SLUG | awk -F '/' '{print $1}')
+      REPO_ID_CSUEBMMG="22eeb8333793"
+      REPO_ID_philiptzou="3a03254beac3"
+      BUILD_MESSAGE="build(${TRAVIS_COMMIT}): $(git log --format=%B -n 1 $TRAVIS_COMMIT)"
+      BUILD_USER_NAME="$(git log --format=%aN -n 1 $TRAVIS_COMMIT)"
+      BUILD_USER_EMAIL="$(git log --format=%aE -n 1 $TRAVIS_COMMIT)"
+    - secure: "Lg7MM4hGy5UMT7gYYIC+Ibtl1nG/uEq6qecDHhwT1I1DtZoGqPAuV4Cajy+GsBMZfRRwtafTzGoKCweGKasI2giof+ijItqZPndFYRLNYV7Dabr6Le7Z5+ONxjZxvQtbgF4cQIRgECKF9cdbFhWFmPYsCMMiaXzeawuW+Fj9mRFTOiODxAFx+2iNEJ1OyXCeHzWq4RKOVl1RMEWPKiJ7O7DBFoDASCIGKx5Y0b5d9da8pmkezhGdqprb775LF0Gx8/3TKEcXk/iiM1A9o2xh3xBgyIn34WHPu2qPmyP8hVrTVdG9soT9ymoYusbVsjs9zcoVD93QqKN5xJ06+Aid5H4Q9+JWNy4VLgUlbiI6W9h5w3nI3O6qVDqY1KmKzzvPjNB4CB535KrVIIE8A0xtvaJnlD0D/ZOHk6NVh9OGo4GUvgzna4G8OGEv6crTCtFc+sTd2+Bb/L1btqP1coPw0bZZP5uJUuuXIcYb8iFTAx2k8Ce7BPKceqjEBfAzsFwM0OWTuFrkhm51rhnlBJIZ4vO0r4FJC8tpt13Lb1H+e3Q59pvzfa8urQpe+sM80EJOKj0rVWpjfqiOcTnwgJXBLR4l1+4q6aW1PtlmWIMKAAsiqBl13XqQ/pP/K6mdKBdRUzRSKEQqK7t1m39+eWt8fvgVxI/vN2ejhaQeQqdEA/M="
 cache:
   directories:
     - build/.git
@@ -39,5 +41,14 @@ after_success:
   - pushd build
   - git add -A
   - git commit -m "$BUILD_MESSAGE"
-  - if [[ $TRAVIS_BRANCH == master && $TRAVIS_PULL_REQUEST == false ]]; then git push origin master:gh-pages; fi
+  - |-
+    if [[ $TRAVIS_BRANCH == master && $TRAVIS_PULL_REQUEST == false ]]; then
+      git push origin master:gh-pages
+    fi
   - popd build
+  - |-
+    if [[ $TRAVIS_BRANCH == master && $TRAVIS_PULL_REQUEST == false && $OWNER_NAME == 'CSUEBMMG' ]]; then
+      mkdir -p _prod
+      sshfs -o StrictHostKeyChecking=no ${PRODUCTION_HOST}: _prod
+      rsync -av --exclude=.git/ --exclude=.gitignore build/* _prod/this-is-a-test/
+    fi
