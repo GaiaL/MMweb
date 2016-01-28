@@ -1,5 +1,5 @@
 ---
-title: "apply"
+title: "Apply Now"
 date: 2016-01-27 02:29 UTC
 heroimage: bg4.jpg
 ---
