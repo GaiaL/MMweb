@@ -1,6 +1,6 @@
 ---
 layout: landing
-title: Apply for Admission
+title: Admission Guidelines
 date: 2016-01-27 22:49 UTC
 tabindex: 2
 tab_content: contents/apply_tab_content
