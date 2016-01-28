@@ -16,7 +16,7 @@
     });
   }
 
-  $arrowTabs.on('click', '.arrow-tab', function(e) {
+  $arrowTabs.on('click', '.arrow-tab.arrow-tab-smooth', function(e) {
     e.preventDefault();
     $('a').each(function() {
       var $this = $(this),

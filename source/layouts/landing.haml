@@ -18,14 +18,14 @@
                     = link_to img.caption.link.title || 'Read more', img.caption.link.url
   
   %section.arrow-tabs(data-current-tab="#{current_page.data.tabindex}")
-    .arrow-tab
+    .arrow-tab.arrow-tab-smooth
       = link_to "/index.html" do
         .arrow-tab-title Overview
-    .arrow-tab.arrow-tab-banner-end
-      = link_to "/admission/index.html" do
+    .arrow-tab.arrow-tab-banner-end.arrow-tab-smooth
+      = link_to_article "admission" do
         .arrow-tab-title Admission
     .arrow-tab.arrow-tab-cta
-      = link_to "/apply" do
+      = link_to_article "apply" do
         .arrow-tab-subtitle Start This Fall
         .arrow-tab-title Apply
 
@@ -36,14 +36,14 @@
           %iframe(src="#{current_page.data.tab_content_video}" frameborder="0" allowfullscreen)
 
     .top-content-text.general-content
-      =partial current_page.data.tab_content
+      = partial current_page.data.tab_content
 
     %hr
 
     .main-content-text.general-content
-      =partial current_page.data.main_content
+      = yield
 
     %nav.main-content-sidebar.general-content
-      =partial current_page.data.main_content_sidebar
+      = partial current_page.data.main_content_sidebar
 
     .clearfix

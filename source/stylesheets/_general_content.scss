@@ -1,6 +1,6 @@
 .general-content {
 
-  > h2 {
+  h2 {
     font-size: 1.4rem;
     text-transform: uppercase;
     color: $color-tuatara;
@@ -12,7 +12,7 @@
     }
   }
 
-  > h2 > small {
+  h2 > small {
     @include font-news-cycle;
     display: block;
     color: $color-scooter;
@@ -26,21 +26,21 @@
     padding: $element-narrow-spacing / 2 0;
   }
 
-  > h3 {
+  h3 {
     font-size: 1.3rem;
     color: $color-scooter;
   }
 
-  > h4 {
+  h4 {
     font-size: 1rem;
     color: $color-carnation;
   }
 
-  > h2, > h3, > h4, > h5, > h6 {
+  h2, h3, h4, h5, h6 {
     margin-top: $element-medium-spacing;
     margin-bottom: $element-narrow-spacing;
   }
-  >p {
+  > p {
     color: $color-tuatara;
     margin-bottom: $element-narrow-spacing;
   }

@@ -1,3 +1,11 @@
+---
+layout: landing
+title: Welcome
+tabindex: 1
+tab_content_video: https://www.youtube.com/embed/mlcBTC4lVJU
+tab_content: contents/overview_tab_content
+main_content_sidebar: contents/main_content_sidebar
+---
 ### Collaboration and Collegiality
 
 Each of our students brings to the Multimedia Graduate Program their exceptional skill and craft in their primary creative area along with great ability and promise in a secondary creative area. The diveristy of these creative areas amongst our students and their implementation in collaborative coursework is what sets the M.A. in Multimedia apart from other similar graduate programs in the United States. Our students make bold, new interactive content pieces that are solely researched, designed, and executed by them and their peers.

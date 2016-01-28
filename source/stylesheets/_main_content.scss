@@ -5,16 +5,15 @@ $hr-dotted-diameter: 4px;
   background-color: $color-gallery;
   position: relative;
   &:before {
-    @include pseudo-element;
     @include border-3d($color-cyan);
-    padding: rem-calc(1px 6px 2px);
-    top: rem-calc(8px);
+    padding: rem-calc(1px 4px 14px);
+    top: rem-calc(-2px);
     left: rem-calc(-8px);
   }
 
   &:after {
-    @include border-3d($color-carnation, $width: null);
-    padding: rem-calc(6px 4px);
+    @include border-3d($color-carnation);
+    padding: rem-calc(4px 4px);
     top: rem-calc(-6px);
     right: rem-calc(-10px);
   }
@@ -50,7 +49,7 @@ $hr-dotted-diameter: 4px;
   }
 }
 
-.main-content:after, .main-content-sidebar {
+.main-content-sidebar {
   @extend .large-4;
   @extend .medium-6;
   @extend .small-12;

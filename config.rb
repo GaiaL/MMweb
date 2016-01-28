@@ -116,9 +116,13 @@ helpers do
   def article filename
     blog.articles.select { |article| article.source_file.end_with? "/#{filename}.html.md" }[0]
   end
-  def link_to_article filename, title=nil
+  def link_to_article(filename, title=nil, &block)
     a = article(filename)
-    link_to (title.nil? ? a.title : title), a
+    if block_given?
+      link_to(a, &block)
+    else
+      link_to (title.nil? ? a.title : title), a
+    end
   end
 end
 

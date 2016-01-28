@@ -1,3 +1,11 @@
+---
+layout: landing
+title: Apply for Admission
+date: 2016-01-27 22:49 UTC
+tabindex: 2
+tab_content: contents/apply_tab_content
+main_content_sidebar: contents/main_content_sidebar
+---
 ### Important Dates for Fall 2016 Entry
 
 Department and University applications for Fall Quarter 2016 Entry
