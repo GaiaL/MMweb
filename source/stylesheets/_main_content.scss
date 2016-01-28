@@ -1,8 +1,13 @@
-$hr-dotted-diameter: 4px;
+$hr-dotted-diameter: rem-calc(4px);
+$main-content-sidebar-radius: $element-medium-spacing;
+$main-content-sidebar-line-height: rem-calc(42px);
+$main-content-sidebar-dividing-line-width: rem-calc(1px);
+$main-content-sidebar-highlight-background-height: $main-content-sidebar-line-height + $main-content-sidebar-dividing-line-width * 2;
+$main-content-sidebar-highlight-arrow-width: $element-narrow-spacing;
 
 .main-content {
   @extend .row;
-  background-color: $color-gallery;
+  background-color: $color-smoke;
   position: relative;
   &:before {
     @include border-3d($color-cyan);
@@ -50,33 +55,91 @@ $hr-dotted-diameter: 4px;
 }
 
 .main-content-sidebar {
-  @extend .large-4;
+  @include media-large-up {
+    width: 30%;
+  }
   @extend .medium-6;
   @extend .small-12;
-}
-
-.main-content-sidebar {
   @extend .column;
 
-  padding: $element-wide-spacing $element-medium-spacing;
-  background-color: $color-white;
-  background-clip: content-box;
+  margin-top: $element-wide-spacing - $element-medium-spacing;
+  padding: $main-content-sidebar-radius + $element-medium-spacing $element-medium-spacing;
+  z-index: 0;
 
-  > h3, >ul {
+  &:before {
+    @include pseudo-element;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: $color-snow;
+    background-clip: content-box;
+    border-radius: $main-content-sidebar-radius + $element-medium-spacing;
+    padding: $element-medium-spacing;
+    z-index: -1;
+
+  }
+
+  > h3 {
+    display: none;
+  }
+
+  > h3 {
     margin-left: $element-medium-spacing;
   }
 
-  > .sidebar-items {
-    margin-top: $element-narrow-spacing;
+  > ul {
+    margin: 0;
+    padding: 0 $element-medium-spacing;
     > li {
       list-style-type: none;
+      line-height: $main-content-sidebar-line-height;
+      border-bottom: $main-content-sidebar-dividing-line-width dashed $color-pear;
       a {
         display: inline-block;
         color: $color-carnation;
-        &:hover {
-          background-color: $color-cyan;
+        width: 100%;
+        z-index: 0;
+        &:hover, &.current {
+          font-weight: 600;
           color: $color-white;
+          &:before {
+            @include pseudo-element;
+            position: absolute;
+            left: 0;
+            background-clip: content-box;
+            width: 100%;
+            height: $main-content-sidebar-highlight-background-height;
+            margin-top: - $main-content-sidebar-dividing-line-width;
+            z-index: -1;
+          }
         }
+        &:hover:before {
+          background-color: $color-scooter;
+          padding: 0 $element-medium-spacing;
+        }
+        &.current {
+          pointer-events: none;
+          cursor: default;
+          &:before {
+            background-color: $color-pear;
+            padding: 0 $element-medium-spacing - $main-content-sidebar-highlight-arrow-width;
+          }
+          &:after {
+            @include pseudo-element;
+            @include triangle($color: $color-pear,
+                              $height: $main-content-sidebar-highlight-background-height,
+                              $width: $main-content-sidebar-highlight-arrow-width,
+                              $angle: 90);
+            position: absolute;
+            right: rem-calc(.2px); // bleeding
+            margin-top: - $main-content-sidebar-highlight-background-height + $main-content-sidebar-dividing-line-width;
+          }
+        }
+      }
+      &:last-of-type {
+        border-bottom: none;
       }
     }
   }

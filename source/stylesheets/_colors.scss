@@ -1,7 +1,8 @@
 // Use http://name-of-color.com/ to find out the closest color name
 
 $color-white: #fff;
-$color-gallery: #eee;
+$color-snow: #f9f9f9;
+$color-smoke: #eee;
 $color-stardust: #9f9f9f;
 $color-cyan: #01ffff;
 $color-tuatara: #363636;
@@ -9,3 +10,12 @@ $color-carnation: #ff5555;
 $color-scooter: #2ac3d5;
 $color-persian-pink: #e97cb7;
 $color-pear: #c7e232;
+
+// override foundation colors
+$white: $color-white;
+$snow: $color-snow;
+$smoke: $color-smoke;
+$aluminum: $color-stardust;
+$oil: $color-tuatara;
+$primary-color: $color-pear;
+$secondary-color: $color-smoke;

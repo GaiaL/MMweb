@@ -119,9 +119,9 @@ helpers do
   def link_to_article(filename, title=nil, &block)
     a = article(filename)
     if block_given?
-      link_to(a, &block)
+      link_to(a, :"data-unique-key" => a.slug, &block)
     else
-      link_to (title.nil? ? a.title : title), a
+      link_to (title.nil? ? a.title : title), a, :"data-unique-key" => a.slug
     end
   end
 end

@@ -50,7 +50,7 @@ $tab-pointer-height: rem-calc(20px);
       opacity: 0;
       margin-top: $element-narrow-spacing;
       left: - $tab-pointer-width / 2;
-      @include triangle($color: $color-gallery,
+      @include triangle($color: $color-smoke,
                         $height: $tab-pointer-height,
                         $width: $tab-pointer-width,
                         $angle: 0);
@@ -89,7 +89,7 @@ $tab-pointer-height: rem-calc(20px);
     font-size: $small-only-tab-font-size;
     text-align: center;
     text-transform: uppercase;
-    background-color: $color-gallery;
+    background-color: $color-smoke;
     @include set-multiple($small-only-tab-height, height line-height);
 
     > .arrow-tab-title, > .arrow-tab-subtitle {

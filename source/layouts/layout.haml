@@ -6,6 +6,8 @@
     %meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     %meta(content="IE=edge,chrome=1" http-equiv="X-UA-Compatible")
+    %meta(name="x-unique-key" content="#{current_page.data.unique_key ? current_page.data.unique_key : current_page.slug}")
+    %link(rel="canonical" href="#{data.config.canonical_host}#{current_page.url}")
     %title= page_title
     = stylesheet_link_tag "all"
   %body(class="#{page_classes}")
@@ -16,4 +18,3 @@
     %footer
       = partial "partials/footer"
     = javascript_include_tag "all"
-    #_page_title.hide= page_title

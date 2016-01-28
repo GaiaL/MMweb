@@ -4,6 +4,7 @@ date: 2016-01-19 11:23 UTC
 heroimage: bg1.jpg
 ---
 ## People
+
 ### Faculty & Staff
 
 **Ian Pollock - Graduate Program Coordinator, Associate Professor of Art**. Professor Pollock, is a digital media fine artist with a Bachelor of Fine Art in New Media from the San Francisco Art Institute and a Master of Fine Art from the University of California, Berkeley. Ian Pollock is a Digital Media Artist who has exhibited nationally and internationally and online. His work on-line and with telephones is featured in several anthologies of digital media art. He is currently working on a project of mapping reports of prejudice and profiling of Muslims in America at [BIASMAP.org](http://biasmap.org/).

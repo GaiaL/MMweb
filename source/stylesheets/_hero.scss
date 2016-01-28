@@ -37,10 +37,18 @@ $hero-caption-title-size: rem-calc(32px);
       margin-right: auto;
       min-width: $row-width;
     }
+    .hero-caption {
+      display: block;
+    }
+  }
+
+  > div:first-of-type .hero-caption {
+    display: block;
   }
 
   .hero-caption {
     position: absolute;
+    display: none;
     padding: $element-narrow-spacing $element-medium-spacing;
     color: $color-white;
     @include font-news-cycle;
