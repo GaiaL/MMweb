@@ -1,9 +1,5 @@
 language: ruby
 sudo: false
-addons:
-  apt:
-    packages:
-    - sshfs
 env:
   global:
     - |-
@@ -49,10 +45,8 @@ after_success:
     if [[ $TRAVIS_BRANCH == master && $TRAVIS_PULL_REQUEST == false ]]; then
       git push origin master:gh-pages
     fi
-  - popd build
+  - popd
   - |-
     if [[ $TRAVIS_BRANCH == master && $TRAVIS_PULL_REQUEST == false && $OWNER_NAME == 'CSUEBMMG' ]]; then
-      mkdir -p _prod
-      sshfs -o StrictHostKeyChecking=no ${PRODUCTION_HOST}: _prod
-      rsync -av --exclude=.git/ --exclude=.gitignore build/* _prod/this-is-a-test/
+      rsync -avz --exclude=.git/ --exclude=.gitignore build/* ${PRODUCTION_HOST}/this-is-a-test/
     fi
