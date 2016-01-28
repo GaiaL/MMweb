@@ -1,5 +1,9 @@
 language: ruby
 sudo: false
+addons:
+  apt:
+    packages:
+    - sshfs
 env:
   global:
     - |-
