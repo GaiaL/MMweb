@@ -11,4 +11,4 @@ Address: 25800 Carlos Bee Blvd, Hayward, CA 94542
 
 Phone: (510) 936-2781
 
-Email: [multimedia [at] csueastbay.edu](mailto://multimedia@csueastbay.edu)
+Email: [multimedia [at] csueastbay.edu](mailto:multimedia@csueastbay.edu)
