@@ -12,6 +12,8 @@ env:
     - secure: "Lg7MM4hGy5UMT7gYYIC+Ibtl1nG/uEq6qecDHhwT1I1DtZoGqPAuV4Cajy+GsBMZfRRwtafTzGoKCweGKasI2giof+ijItqZPndFYRLNYV7Dabr6Le7Z5+ONxjZxvQtbgF4cQIRgECKF9cdbFhWFmPYsCMMiaXzeawuW+Fj9mRFTOiODxAFx+2iNEJ1OyXCeHzWq4RKOVl1RMEWPKiJ7O7DBFoDASCIGKx5Y0b5d9da8pmkezhGdqprb775LF0Gx8/3TKEcXk/iiM1A9o2xh3xBgyIn34WHPu2qPmyP8hVrTVdG9soT9ymoYusbVsjs9zcoVD93QqKN5xJ06+Aid5H4Q9+JWNy4VLgUlbiI6W9h5w3nI3O6qVDqY1KmKzzvPjNB4CB535KrVIIE8A0xtvaJnlD0D/ZOHk6NVh9OGo4GUvgzna4G8OGEv6crTCtFc+sTd2+Bb/L1btqP1coPw0bZZP5uJUuuXIcYb8iFTAx2k8Ce7BPKceqjEBfAzsFwM0OWTuFrkhm51rhnlBJIZ4vO0r4FJC8tpt13Lb1H+e3Q59pvzfa8urQpe+sM80EJOKj0rVWpjfqiOcTnwgJXBLR4l1+4q6aW1PtlmWIMKAAsiqBl13XqQ/pP/K6mdKBdRUzRSKEQqK7t1m39+eWt8fvgVxI/vN2ejhaQeQqdEA/M="
 cache:
   directories:
+    - /home/travis/.rvm/archives
+    - /home/travis/.nvm
     - build/.git
     - node_modules
     - vendor/bundle
